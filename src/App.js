@@ -1,11 +1,14 @@
 import NavBar from "./components/NavBar/NavBar";
-import "./components/NavBar/NavBar.scss";
-// import "./App.scss";
+import MiComponente from "./components/ItemListContainer/MiComponente";
+import "./reset.scss";
 
 function App() {
   return (
     <>
       <NavBar />
+      <section className="componente">
+      <MiComponente />
+      </section>
     </>
   );
 }
