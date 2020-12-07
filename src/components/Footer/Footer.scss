@@ -4,6 +4,17 @@ footer {
   .footer {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+
+    .redes {
+      font-size: 2rem;
+      color: #fff;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      padding: 0 1.5rem 2rem;
+    }
   }
 }

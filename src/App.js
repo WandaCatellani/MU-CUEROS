@@ -7,10 +7,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <Home
-        title="Tienda"
-        subtitulo="Aprendo a pasar props"
-      />
+      <Home title="Tienda" />
       <Footer />
     </>
   );

@@ -5,7 +5,7 @@ import "./Home.scss";
 import CardDeck from "react-bootstrap/CardDeck";
 import Card from "react-bootstrap/Card";
 
-import {products} from "../dataBase/db";
+import { products } from "../../dataBase/db";
 
 class Home extends Component {
   constructor() {
@@ -14,7 +14,7 @@ class Home extends Component {
     /* State indica el estado de los datos */
     this.state = {
       subtitulo: "Elegí tu producto favorito",
-      products: products,
+      products,
     };
   }
 
@@ -23,32 +23,18 @@ class Home extends Component {
     const { subtitulo } = this.state;
     const products = this.state.products.map((product, i) => {
       return (
-        <CardDeck>
-          <Card>
-            <Card.Img variant="top" src="https://www.soscomputacion.com.ar/14852-large_default/celular-xiaomi-redmi-note-8-64gb-4gb-ram-4-camaras-48mpx-snapdragon-665-aie.jpg" />
-            <Card.Body>
-              <Card.Title> {products.title} </Card.Title>
-              <Card.Text> {products.modelo} </Card.Text>
-            </Card.Body>
-            <Card.Footer> {products.precio} </Card.Footer>
-          </Card>
-          <Card>
-            <Card.Img variant="top" src="https://www.soscomputacion.com.ar/14852-large_default/celular-xiaomi-redmi-note-8-64gb-4gb-ram-4-camaras-48mpx-snapdragon-665-aie.jpg" />
-            <Card.Body>
-              <Card.Title> {products.title} </Card.Title>
-              <Card.Text> {products.modelo} </Card.Text>
-            </Card.Body>
-            <Card.Footer> {products.precio} </Card.Footer>
-          </Card>
-          <Card>
-            <Card.Img variant="top" src="https://www.soscomputacion.com.ar/14852-large_default/celular-xiaomi-redmi-note-8-64gb-4gb-ram-4-camaras-48mpx-snapdragon-665-aie.jpg" />
-            <Card.Body>
-              <Card.Title> {products.title} </Card.Title>
-              <Card.Text> {products.modelo} </Card.Text>
-            </Card.Body>
-            <Card.Footer> {products.precio} </Card.Footer>
-          </Card>
-        </CardDeck>
+        <div className="row">
+          <CardDeck className="col-md-4">
+            <Card>
+              <Card.Img variant="top" src={product.img} />
+              <Card.Body>
+                <Card.Title> {product.title} </Card.Title>
+                <Card.Text> {product.modelo} </Card.Text>
+              </Card.Body>
+              <Card.Footer> {product.precio} </Card.Footer>
+            </Card>
+          </CardDeck>
+        </div>
       );
     });
 
