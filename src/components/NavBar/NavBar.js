@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./NavBar.scss";
+import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
   return (
@@ -21,6 +22,7 @@ const NavBar = () => {
             <NavDropdown.Item href="#">Ofertas</NavDropdown.Item>
           </NavDropdown>
         </Nav>
+      <CartWidget />
       </Navbar.Collapse>
     </Navbar>
   );

@@ -1,0 +1,9 @@
+footer {
+  background-color: lightcoral;
+
+  .footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+  }
+}
