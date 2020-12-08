@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Greeting from "../../components/Greeting/Greeting";
 import "./Home.scss";
 // import ItemList from "./components/ItemList/ItemList"
 
@@ -19,7 +20,6 @@ class Home extends Component {
   }
 
   render() {
-    const { title } = this.props;
     const { subtitulo } = this.state;
     const products = this.state.products.map((product, i) => {
       return (
@@ -39,13 +39,13 @@ class Home extends Component {
     });
 
     return (
-      <div>
+      <main>
         <section className="container home">
-          <h1>{title}</h1>
+          <Greeting greeting={"Bienvenidos!"} />
           <h2>{subtitulo}</h2>
         </section>
         <section className="container">{products}</section>
-      </div>
+      </main>
     );
   }
 }
