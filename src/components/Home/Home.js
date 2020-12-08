@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import Greeting from "../../components/Greeting/Greeting";
+import { CardDeck, Card } from "react-bootstrap";
 import "./Home.scss";
-// import ItemList from "./components/ItemList/ItemList"
-
-import CardDeck from "react-bootstrap/CardDeck";
-import Card from "react-bootstrap/Card";
-
+import Greeting from "../../components/Greeting/Greeting";
 import { products } from "../../dataBase/db";
+// import ItemList from "../../components/ItemList/ItemList";
+import Imagenes from "../Carousel/Carousel";
+
 
 class Home extends Component {
   constructor() {
@@ -15,7 +14,7 @@ class Home extends Component {
     /* State indica el estado de los datos */
     this.state = {
       subtitulo: "Elegí tu producto favorito",
-      products,
+      products
     };
   }
 
@@ -45,6 +44,9 @@ class Home extends Component {
           <h2>{subtitulo}</h2>
         </section>
         <section className="container">{products}</section>
+        <section className="container-fluid slider">
+          <Imagenes />
+        </section>
       </main>
     );
   }

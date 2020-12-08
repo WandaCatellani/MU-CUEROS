@@ -1,18 +1,16 @@
 // import Card from "react-bootstrap/Card";
 // import "./Item.scss";
 
-// export default function Item({ item }) {
+// export default function Item({ products }) {
 //   return (
 //     <div id="Item">
 //       <Card>
-//         <Card.Img variant="top" src={item.img} />
+//         <Card.Img variant="top" src={products.img} />
 //         <Card.Body>
-//           <Card.Title>
-//             {item.producto} {item.modelo}
-//           </Card.Title>
-//           <Card.Text>{item.precio}</Card.Text>
+//           <Card.Title>{products.title}</Card.Title>
+//           <Card.Text>{products.modelo}</Card.Text>
 //         </Card.Body>
-//         <Card.Footer>{product.precio}</Card.Footer>
+//         <Card.Footer>{products.precio}</Card.Footer>
 //       </Card>
 //     </div>
 //   );

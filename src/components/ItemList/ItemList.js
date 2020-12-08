@@ -2,10 +2,10 @@
 // import Item from "../Item/Item";
 // import "./ItemList.scss";
 
-// const ItemList = ({ items }) => {
+// const ItemList = ({ products }) => {
 //   return (
 //     <CardDeck>
-//       {items.map((product, i) => {
+//       {products.map((product, i) => {
 //         return <Item item={product} key={i} />;
 //       })}
 //     </CardDeck>
