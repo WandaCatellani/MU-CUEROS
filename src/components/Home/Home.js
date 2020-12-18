@@ -3,18 +3,16 @@ import { CardDeck, Card } from "react-bootstrap";
 import "./Home.scss";
 import Greeting from "../../components/Greeting/Greeting";
 import { products } from "../../dataBase/db";
-// import ItemList from "../../components/ItemList/ItemList";
 import Imagenes from "../Carousel/Carousel";
-
+import ItemCount from "../ItemCount/ItemCount";
 
 class Home extends Component {
   constructor() {
-    /* Hereda component de React */
     super();
-    /* State indica el estado de los datos */
+
     this.state = {
       subtitulo: "Elegí tu producto favorito",
-      products
+      products,
     };
   }
 
@@ -26,13 +24,17 @@ class Home extends Component {
           <CardDeck className="col-md-4">
             <Card>
               <Card.Img variant="top" src={product.img} />
+
               <Card.Body>
                 <Card.Title> {product.title} </Card.Title>
                 <Card.Text> {product.modelo} </Card.Text>
               </Card.Body>
+
               <Card.Footer> {product.precio} </Card.Footer>
             </Card>
+            <ItemCount />
           </CardDeck>
+          
         </div>
       );
     });
@@ -43,7 +45,9 @@ class Home extends Component {
           <Greeting greeting={"Bienvenidos!"} />
           <h2>{subtitulo}</h2>
         </section>
+
         <section className="container">{products}</section>
+
         <section className="container-fluid slider">
           <Imagenes />
         </section>

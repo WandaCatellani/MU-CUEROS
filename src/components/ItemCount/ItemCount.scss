@@ -1,0 +1,42 @@
+.itemsCount {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+
+  .btn-add {
+    color: rgb(203, 69, 230);
+    background-color: #fff;
+    border-color: #000;
+
+    &:hover {
+      color: #fff;
+      background-color: rgb(230, 69, 144);
+    }
+  }
+
+  .btn-rem {
+    color: rgb(230, 69, 144);
+    background-color: #fff;
+    border-color: #000;
+
+    &:hover {
+      color: #fff;
+      background-color: rgb(230, 69, 144);
+    }
+  }
+
+  .btn-cart {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+
+    .cartIconCard {
+      color: red;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
