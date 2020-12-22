@@ -4,7 +4,6 @@ import "./Home.scss";
 import Greeting from "../../components/Greeting/Greeting";
 import { products } from "../../dataBase/db";
 import Imagenes from "../Carousel/Carousel";
-import ItemCount from "../ItemCount/ItemCount";
 
 class Home extends Component {
   constructor() {
@@ -32,9 +31,7 @@ class Home extends Component {
 
               <Card.Footer> {product.precio} </Card.Footer>
             </Card>
-            <ItemCount />
           </CardDeck>
-          
         </div>
       );
     });

@@ -1,55 +1,36 @@
-/* import React, { useState } from "react";
-import "./ItemCount.scss";
-import { FaOpencart } from "react-icons/fa";
-import Button from "react-bootstrap/Button"; */
+// import React, { useState, useEffect } from "react";
 
-/* function ItemCount({ stock, initial, onAdd }) {
-  const [count, setcount] = useState(initial);
+// export default function ItemCount(props) {
+//   const [count, setCount] = useState(0);
 
-  const addCount = () => {
-    if (count >= initial && count < stock) {
-      return setcount(count + 1), onAdd(count + 1);
-    } else {
-      alert(`No hay mas stock`);
-    }
-  };
+//   useEffect(() => {
+//     if (count < 0) {
+//       setCount(0);
+//     } else {
+//       if (count > 10) {
+//         setCount(10);
+//       }
+//     }
+//   }, [count]);
 
-  const removeCount = () => {
-    if (count > initial) {
-      return setcount(count - 1), onAdd(count - 1);
-    }
-  };
-
-  const handleAdd = () => alert(`Has agregado ${count} productos a tu carrito`);
-
-  return (
-    <div className="centered itemsCount">
-      <Button onClick={addCount} className="btn-add">
-        {" "}
-        +{" "}
-      </Button>
-
-      <span>{count}</span>
-
-      <Button onClick={removeCount} className="btn-rem">
-        {" "}
-        -{" "}
-      </Button>
-
-      <Button onClick={handleAdd} className="btn-cart">
-        {" "}
-        Agregar al carrito{" "}
-        <span className="cartIconCard">
-          {" "}
-          <FaOpencart />{" "}
-        </span>
-      </Button>
-    </div>
-  );
-}
-
-export default ItemCount;
- */
+//   return (
+//     <div className="itemsCount">
+//       <input
+//         className="btn-rem"
+//         type="button"
+//         value="-"
+//         onClick={() => setCount(count - 1)}
+//       />
+//       <input type="text" value={count} readOnly />
+//       <input
+//         className="btn-add"
+//         type="button"
+//         value="+"
+//         onClick={() => setCount(count + 1)}
+//       />
+//     </div>
+//   );
+// }
 
 import { useState } from "react";
 import "./ItemCount.scss";

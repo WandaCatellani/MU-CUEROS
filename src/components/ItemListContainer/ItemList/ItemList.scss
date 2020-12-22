@@ -1,0 +1,33 @@
+.list-roducts {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+
+  h3 {
+    color: hsla(355, 80%, 36%, 0.692);
+    font-style: italic;
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+    color: blueviolet;
+    padding-top: 1rem;
+  }
+
+  .img-product {
+    height: 50vh;
+  }
+
+  .desc-product {
+    font-size: 1.5rem;
+    color: hsla(271, 76%, 53%, 0.432);
+  }
+
+  .price-product {
+    font-size: 2rem;
+    color: hsla(327, 76%, 53%, 0.432);
+  }
+}
