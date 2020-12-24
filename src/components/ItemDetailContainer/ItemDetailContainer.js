@@ -1,30 +1,31 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail/ItemDetail";
 import Spinner from "../Spinner/Spinner";
+import { products } from "../Item/Item";
 
 function ItemDetailContainer(props) {
-  const [item, setItem] = useState(false);
+  const [prod, setProd] = useState({});
 
   useEffect(() => {
+    console.log(prod);
     setTimeout(() => {
-      fetch("https://5f3c95f36c11f80016d6f21e.mockapi.io/bitbuyer/items/")
-        .then((response) => {
-          return response.json();
-        })
-
-        .then((data) => {
-          setItem(data);
-        });
-    }, 3000);
-  }, [item]); //Esto se ejecuta apenas se monta el componente / onInit
-
+      let pedido = fetch({ products });
+      console.log(pedido);
+      pedido.then((response) => {
+        setProd(response);
+      });
+    }, 1000);
+  }, [prod]); //Esto se ejecuta apenas se monta el componente / onInit
+  
   return (
     <div>
-      {item ? (
-        <ItemDetail nombre={item.nombre} img={item.imagen} precio={item.precio} />
+      {prod ? (
+        <ItemDetail item={prod} />
       ) : (
         <>
-          <p className="p-loader">Trayendo información desde base de datos...</p>
+          <p className="p-loader">
+            Trayendo información desde base de datos...
+          </p>
           <Spinner />
         </>
       )}

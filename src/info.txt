@@ -1,0 +1,6 @@
+1) El componente arranca su ejecucion 
+2) El componente crea un estado (useState)
+3) El componente renderiza (return)
+4) Arranco el efecto secundario (useEffect)
+5) Hago el pedido al servidor (adentro del useEffect)
+6) Cuando obtengo la respuesta actualizo la vista (modifico el state)

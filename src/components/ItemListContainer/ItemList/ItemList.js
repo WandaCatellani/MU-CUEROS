@@ -67,7 +67,9 @@ const ItemList = () => {
         product.map((item, i) => (
           <div className="list-roducts">
             <h3>{item.title}</h3>
+
             <h4>{item.model}</h4>
+
             <Image
               className="img-product"
               src={item.picture}
@@ -75,9 +77,13 @@ const ItemList = () => {
               fluid
               rounded
             />
+
             <p>{item.id}</p>
+
             <p className="desc-product">{item.description}</p>
+
             <p className="price-product">${item.price}</p>
+
             <ItemCount />
           </div>
         ))
