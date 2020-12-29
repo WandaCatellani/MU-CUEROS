@@ -1,16 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { productsDetails } from "../../Item/Item";
 import ItemCount from "../../ItemCount/ItemCount";
+import Spinner from "../../Spinner/Spinner";
+import './ItemDetail.scss';
 
-function ItemDetail({ item }) {
+function ItemDetail() {
+  const [item, setItem] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    setTimeout(() => {
+      const promise = new Promise((res, rej) => {
+        res(productsDetails);
+      });
+      promise.then((productsDetails) => {
+        setItem(productsDetails);
+      });
+    }, 1000);
+  }, [id]);
+
   return (
-    <div className="ItemDetail">
-      <h3 className="productDetail">{item.title}</h3>
-      <p> {item.model} </p>
-      <img src={item.picture} alt="img-product" />
-      <p> {item.description} </p>
-      <h4 className="productDetail">Precio: {item.price}</h4>
-      <ItemCount />
+    <div>
+      {item.length === 0 ? (
+        <Spinner />
+      ) : (
+        item.map((e) => {
+          console.log(e.id);
+          return e.id === id ? (
+            <div className="ItemDetail" key={e.id}>
+              <img id="bookCover" src={e.img} alt="Product" />
+              <p>Titulo: {e.title}</p>
+              <div>
+                {" "}
+                <ItemCount />{" "}
+              </div>
+            </div>
+          ) : null;
+        })
+      )}
     </div>
   );
 }
+
 export default ItemDetail;

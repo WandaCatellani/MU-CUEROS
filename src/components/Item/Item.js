@@ -19,7 +19,7 @@
 
 // export default Item;
 
-export const products = [
+export const productsDetails = [
   {
     id: 1,
     title: "Samsung",
