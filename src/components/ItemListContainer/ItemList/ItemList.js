@@ -1,63 +1,21 @@
-// import React, { useState, useEffect } from "react";
-// import CardDeck from "react-bootstrap/CardDeck";
-// import "./ItemList.scss";
-// import Item from "../../Item/Item";
-// // import ItemCount from "../../ItemCount/ItemCount";
-
-// function ItemList(props) {
-//   const [items, setItems] = useState(false);
-
-//   useEffect(() => {
-//     setTimeout(() => {
-//       fetch("https://5f3c95f36c11f80016d6f21e.mockapi.io/bitbuyer/items")
-//         .then((response) => {
-//           return response.json();
-//         })
-//         .then((data) => {
-//           setItems(data);
-//         });
-//     }, 1000);
-//   }, []); //Esto se ejecuta apenas se monta el componente / onInit
-
-//   return (
-//     <div>
-//       <CardDeck>
-//         {items ? (
-//           items.map((product, i) => (
-//             <Item
-//               key={product.id}
-//               nombre={product.nombre}
-//               imagen={product.imagen}
-//               precio={product.precio}
-//               categoria={product.categoria}
-//             />
-//           ))
-//         ) : (
-//           // <ItemCount />
-//           <p>Trayendo información desde base de datos...</p>
-//         )}
-//       </CardDeck>
-//     </div>
-//   );
-// }
-
-// export default ItemList;
-
 import React, { useState, useEffect } from "react";
 import Image from "react-bootstrap/Image";
 import "./ItemList.scss";
-import { products } from "../../Item/Item";
+import { productsDetails } from "../../Item/Item";
 import ItemCount from "../../ItemCount/ItemCount";
+import Spinner from "../../Spinner/Spinner";
+import { Link } from "react-router-dom";
+
 const ItemList = () => {
   const [product, setItem] = useState([]);
 
   useEffect(() => {
     setTimeout(() => {
       const promise = new Promise((res, rej) => {
-        res(products);
+        res(productsDetails);
       });
-      promise.then((products) => {
-        setItem(products);
+      promise.then((productsDetails) => {
+        setItem(productsDetails);
       });
     }, 1000);
   }, []);
@@ -66,8 +24,9 @@ const ItemList = () => {
       {product ? (
         product.map((item, i) => (
           <div className="list-roducts">
+            <Link to={"/category/:id"}>
             <h3>{item.title}</h3>
-
+            </Link>
             <h4>{item.model}</h4>
 
             <Image
@@ -88,7 +47,7 @@ const ItemList = () => {
           </div>
         ))
       ) : (
-        <p>Trayendo información desde base de datos...</p>
+        <Spinner />
       )}
     </div>
   );

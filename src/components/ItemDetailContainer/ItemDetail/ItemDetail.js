@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { productsDetails } from "../../Item/Item";
 import ItemCount from "../../ItemCount/ItemCount";
 import Spinner from "../../Spinner/Spinner";
-import './ItemDetail.scss';
+import "./ItemDetail.scss";
 
 function ItemDetail() {
   const [item, setItem] = useState([]);
@@ -26,17 +26,16 @@ function ItemDetail() {
         <Spinner />
       ) : (
         item.map((e) => {
-          console.log(e.id);
-          return e.id === id ? (
+          return (
             <div className="ItemDetail" key={e.id}>
-              <img id="bookCover" src={e.img} alt="Product" />
+              <img src={e.picture} alt="Product" />
               <p>Titulo: {e.title}</p>
               <div>
                 {" "}
                 <ItemCount />{" "}
               </div>
             </div>
-          ) : null;
+          );
         })
       )}
     </div>

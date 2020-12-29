@@ -2,16 +2,21 @@ import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./NavBar.scss";
 import CartWidget from "../CartWidget/CartWidget";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <Navbar className="nav" expand="lg">
-      <Navbar.Brand href="#">Logo</Navbar.Brand>
+      <NavLink to="/">Logo</NavLink>
+
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link className="li" href="#">Home</Nav.Link>
-          <Nav.Link className="li" href="#">Contacto</Nav.Link>
+          <NavLink className="li" to="#">
+            Contacto
+          </NavLink>
+          
           <NavDropdown className="li" title="Productos" id="basic-nav-dropdown">
             <NavDropdown.Item href="#">Mejor valorados</NavDropdown.Item>
             <NavDropdown.Item href="#">Mas buscados</NavDropdown.Item>
@@ -20,8 +25,8 @@ const NavBar = () => {
             <NavDropdown.Item href="#">Ofertas</NavDropdown.Item>
           </NavDropdown>
         </Nav>
-        <CartWidget />
       </Navbar.Collapse>
+      <CartWidget />
     </Navbar>
   );
 };

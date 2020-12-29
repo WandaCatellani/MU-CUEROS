@@ -8,6 +8,7 @@ export default function ItemListContainer(props) {
         Bienvenido {props.nombre}, a nuestra lista de productos recomendados
         para vos!
       </h2>
+
       <ItemList />
     </div>
   );
