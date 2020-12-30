@@ -16,14 +16,10 @@ const NavBar = () => {
           <NavLink className="li" to="#">
             Contacto
           </NavLink>
-          
-          <NavDropdown className="li" title="Productos" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#">Mejor valorados</NavDropdown.Item>
-            <NavDropdown.Item href="#">Mas buscados</NavDropdown.Item>
-            <NavDropdown.Item href="#">Todos</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#">Ofertas</NavDropdown.Item>
-          </NavDropdown>
+
+          <NavLink className="li" to="/tienda">
+            Tienda
+          </NavLink>
         </Nav>
       </Navbar.Collapse>
       <CartWidget />

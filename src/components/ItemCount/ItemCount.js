@@ -34,44 +34,46 @@
 
 import { useState } from "react";
 import "./ItemCount.scss";
-import { FaOpencart } from "react-icons/fa";
-import Button from "react-bootstrap/Button";
+import Button from "../Button/Button";
+// import { FaOpencart } from "react-icons/fa";
 
-const ItemCount = () => {
-  const [qty, setQty] = useState(1);
+const ItemCount = ({ initialValue, maxValue, onAdd }) => {
+  const [counter, setCounter] = useState(initialValue);
 
-  const handleClickResta = () => {
-    if (qty > 1) {
-      setQty(qty - 1);
+  const adding = () => {
+    if (counter >= initialValue && counter < maxValue) {
+      return setCounter(counter + 1), onAdd(counter + 1);
+    } else if (counter === maxValue) {
+      console.log("maxValuee");
     }
   };
 
-  const onAdd = () => {
-    alert(`Agregaste ${qty} productos al carrito`);
+  const removing = () => {
+    if (counter > initialValue) {
+      return setCounter(counter - 1), onAdd(counter - 1);
+    } else if (counter <= initialValue) {
+      console.log("minValue");
+    }
   };
 
   return (
-    <div className="centered itemsCount">
-        <Button
-          className="btn-add"
-          disabled={qty === 1 ? "disabled" : null}
-          onClick={handleClickResta}
-        >
-          -
-        </Button>
-        <input type="text" value={qty} readOnly />
-        <Button className="btn-rem" onClick={() => setQty(qty + 1)}>
-          +
-        </Button>
+    <>
+      <div className="centered itemsCount">
+        <h3>{counter}</h3>
 
-      <Button className="btn-cart" onClick={onAdd}>
-        Agregar al carrito{" "}
-        <span className="cartIconCard">
-          {" "}
-          <FaOpencart />{" "}
-        </span>
-      </Button>
-    </div>
+        <Button
+          content={"+"}
+          callback={adding}
+          className="buttonCounter"
+        ></Button>
+
+        <Button
+          content={"-"}
+          callback={removing}
+          className="buttonCounter"
+        ></Button>
+      </div>
+    </>
   );
 };
 

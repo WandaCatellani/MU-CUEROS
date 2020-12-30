@@ -2,7 +2,7 @@ import React from "react";
 import "./Greeting.scss";
 
 const Greeting = ({ greeting }) => {
-  return <h1 className="title">{greeting}</h1>;
+  return <h2 className="title">{greeting}</h2>;
 };
 
 export default Greeting;
