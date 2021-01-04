@@ -10,12 +10,16 @@ const ItemDetail = ({ product }) => {
     setQuantity(counter);
   };
 
+  const addToCart = () => {
+    alert(`Agregaste ${quantity} ${product.title} al carrito`);
+  };
+
   return (
     <>
       <Button content={"Atras"} path={"/"} />
       <div id="ItemDetail">
         <div>
-          <img src={product.img} alt={"Imagen"} />
+          <img src={product.picture} alt={"Imagen"} />
         </div>
 
         <div>
@@ -26,7 +30,10 @@ const ItemDetail = ({ product }) => {
 
           <ItemCount initialValue={1} maxValue={10} onAdd={onAddItem} />
 
-          <Button content={`Agregar al carrito ${quantity} ${product.model}`} />
+          <Button
+            content={`Agregar al carrito ${quantity} ${product.model}`}
+            callback={addToCart}
+          />
         </div>
       </div>
     </>

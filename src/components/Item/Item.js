@@ -1,4 +1,4 @@
-import { Button } from "bootstrap";
+import  Button  from "../Button/Button";
 import React from "react";
 import Card from "react-bootstrap/Card";
 import "./Item.scss";
@@ -14,8 +14,8 @@ function Item({ item }) {
             {item.model} {item.price}
           </Card.Text>
         </Card.Body>
+
         <Card.Footer>
-          
           <Button content={`Detalle`} path={`/detail/${item.id}`} />
         </Card.Footer>
       </Card>

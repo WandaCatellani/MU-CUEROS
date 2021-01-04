@@ -3,13 +3,12 @@ import "./CartWidget.scss";
 import { FaOpencart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-class CartWidget extends React.Component {
-  render() {
-    return(
+const CartWidget = () => {
+  return (
     <Link to="/cart" className="cartIcon">
       <FaOpencart />
-    </Link>)
-  }
-}
+    </Link>
+  );
+};
 
 export default CartWidget;

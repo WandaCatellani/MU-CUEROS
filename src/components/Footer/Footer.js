@@ -15,7 +15,7 @@ const Footer = () => {
           <FaFacebook />
         </div>
 
-        <h6>&copy; Copyright 2020</h6>
+        <p>&copy; Copyright 2020</p>
       </section>
     </footer>
   );

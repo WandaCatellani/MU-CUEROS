@@ -12,12 +12,8 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
-      getProductById(id).then((res) => {
-        res.forEach((productos) => {
-          if (productos.id === Number(id)) {
-            setProduct(productos);
-          }
-        });
+      getProductById(Number(id)).then((res) => {
+        setProduct(res)
         setLoading(false);
       });
     }, 3000);
