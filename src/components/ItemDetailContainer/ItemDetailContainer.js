@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail/ItemDetail";
 import Spinner from "../Spinner/Spinner";
-import { productsDetails } from "../../dataBase/db";
+import { getProductById } from "../../dataBase/db";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
-      productsDetails(id).then((res) => {
+      getProductById(id).then((res) => {
         res.forEach((productos) => {
           if (productos.id === Number(id)) {
             setProduct(productos);

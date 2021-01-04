@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import './Button.scss';
 
-const Button = ({ content, path }) => {
+const Button = ({ content, path, callback }) => {
   return (
     <Link to={path}>
-      <button id='Button' >
-        {content}
+      <button id='Button' onClick= {callback}>
+        {content} 
       </button>
     </Link>
   )

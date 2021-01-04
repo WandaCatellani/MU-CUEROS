@@ -15,8 +15,8 @@ function Item({ item }) {
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          {" "}
-          <Button content={`Detalle`} path={`/detail/${item.id}`} />{" "}
+          
+          <Button content={`Detalle`} path={`/detail/${item.id}`} />
         </Card.Footer>
       </Card>
     </div>

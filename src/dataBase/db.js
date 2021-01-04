@@ -1,4 +1,4 @@
-export const productsDetails = [
+const productsDetails = [
   {
     id: 1,
     title: "Samsung",
@@ -33,3 +33,15 @@ export const productsDetails = [
     stock: 45,
   },
 ];
+
+export const getProducts = () => {
+  return new Promise((resolve) => {
+    resolve(productsDetails);
+  });
+};
+
+export const getProductById = (id) => {
+  return new Promise((resolve) => {
+    resolve(productsDetails.find((product) => product.id === id));
+  });
+};
