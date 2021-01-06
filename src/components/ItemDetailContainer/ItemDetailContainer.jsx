@@ -13,10 +13,10 @@ const ItemDetailContainer = () => {
     setLoading(true);
     setTimeout(() => {
       getProductById(Number(id)).then((res) => {
-        setProduct(res)
+        setProduct(res);
         setLoading(false);
       });
-    }, 3000);
+    }, 1000);
   }, [id]);
 
   return (

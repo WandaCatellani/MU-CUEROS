@@ -6,23 +6,25 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <Navbar className="nav" expand="lg">
-      <NavLink to="/">Logo</NavLink>
+    <Navbar className="nav" expand="md">
+      <NavLink to="/" className="navLogo">Logo</NavLink>
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <NavLink className="li" to="#">
+          <NavLink className="navLink" to="/">
+            Home
+          </NavLink>
+          <NavLink className="navLink" to="#">
             Contacto
           </NavLink>
-
-          <NavLink className="li" to="/tienda">
+          <NavLink className="navLink" to="/tienda">
             Tienda
           </NavLink>
         </Nav>
-      </Navbar.Collapse>
       <CartWidget />
+      </Navbar.Collapse>
     </Navbar>
   );
 };

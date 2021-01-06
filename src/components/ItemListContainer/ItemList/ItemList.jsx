@@ -65,7 +65,7 @@ import CardDeck from "react-bootstrap/CardDeck";
 const ItemList = ({ items }) => {
   return (
     <div className={"itemList"}>
-      <CardDeck>
+      <CardDeck className="cardsList">
         {items.map((item, i) => {
           return <Item item={item} key={i} />;
         })}

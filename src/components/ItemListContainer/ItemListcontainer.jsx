@@ -20,7 +20,7 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <Greeting greeting = {"Bienvenidos al mejor e-commerce!"} />
+      <Greeting greeting={"Bienvenidos al mejor e-commerce!"} />
       {loading ? <Spinner /> : <ItemList items={items} />}
     </>
   );

@@ -1,9 +1,42 @@
-#Item {
-  width: 45%;
-  margin-bottom: 10px;
-  margin-right: 10px;
+.cards {
+  width: 30%;
+  margin: 0 1.5rem;
 
-  img {
+  &:hover {
+    box-shadow: 4px 6px 5px 0px rgba(78, 78, 78, 0.75);
+  }
+
+  .card-img {
     width: 100%;
+  }
+  
+  .card-title {
+    color: blueviolet;
+    font-size: 1.5rem;
+  }
+
+  .card-model {
+    color: tomato;
+    font-size: 1.2rem;
+  }
+
+  .card-price {
+    color: teal;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+  }
+
+  .card-footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+
+    .card-addProduct {
+      font-size: 1.5rem;
+      color: red;
+    }
   }
 }
