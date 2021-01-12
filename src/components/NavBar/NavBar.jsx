@@ -7,7 +7,9 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <Navbar className="nav" expand="md">
-      <NavLink to="/" className="navLogo">Logo</NavLink>
+      <NavLink to="/" className="navLogo">
+        Logo
+      </NavLink>
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
@@ -23,7 +25,7 @@ const NavBar = () => {
             Tienda
           </NavLink>
         </Nav>
-      <CartWidget />
+        <CartWidget />
       </Navbar.Collapse>
     </Navbar>
   );

@@ -1,0 +1,75 @@
+// no funciona
+#btn-volver {
+  border-radius: 5%;
+  color: blue;
+  margin: 3rem;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  margin: 5rem auto;
+
+  .card-titles {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "img titulo cantidad precio eliminar";
+    padding: 0 15px;
+    border-bottom: 1px solid hsla(0, 0%, 60%, 0.301);
+  }
+
+  .cart-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "img titulo cantidad precio eliminar";
+    margin: 1rem 0;
+    border-bottom: 1px solid hsla(0, 0%, 60%, 0.301);
+
+    .cart-img {
+      grid-area: img;
+      width: 60%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cart-description {
+      grid-area: titulo;
+      padding: 2rem 0;
+      // no funciona
+      font-size: 1.2rem;
+    }
+
+    .cart-count {
+      grid-area: cantidad;
+      padding-top: 3rem;
+    }
+
+    .cart-price {
+      grid-area: precio;
+      padding-top: 3rem;
+    }
+
+    .cart-del {
+      grid-area: eliminar;
+      color: rgb(101, 103, 209);
+      cursor: pointer;
+      font-size: 1.2rem;
+
+      &:hover {
+        color: rgb(206, 81, 81) (224, 92, 92);
+      }
+    }
+  }
+}
+
+.cart-total {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 15%;
+  margin: 0 10rem 0 auto;
+}

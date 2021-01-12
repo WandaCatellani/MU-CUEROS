@@ -2,35 +2,38 @@ import "./ItemDetail.scss";
 import Button from "../../Button/Button";
 import ItemCount from "../../ItemCount/ItemCount";
 import { useState } from "react";
+import useCartContext from "../../../context/CartContext";
 
 const ItemDetail = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
+
+  const { addProduct } = useCartContext();
 
   const onAddItem = (counter) => {
     setQuantity(counter);
   };
 
   const addToCart = () => {
-    alert(`Agregaste ${quantity} ${product.title} al carrito`);
+    // alert(`Agregaste ${quantity} ${product.title} al carrito`);
+    addProduct(product, quantity);
   };
 
   return (
     <>
-      <Button content={"Atras"} path={"/"} />
-      <div id="ItemDetail">
-        <div>
-          <img src={product.picture} alt={"Imagen"} />
-        </div>
+      <Button content={"Atras"} path={"/"} className="btn-atras" />
+      <div id="ItemDetail" className="text-center m-3 mt-5">
+        <img className="item-img" src={product.picture} alt={"Imagen"} />
 
-        <div>
-          <h3 className={"productDetail"}>{product.title}</h3>
-          <h3 className={"productDetail"}>Modelo: {product.model}</h3>
-          <h4 className={"productDetail"}>${product.price}</h4>
-          <h6 className={"productDetail"}>Stock: {product.stock} unidades</h6>
+        <div className={"itemDetail"}>
+          <h3 className={"item-title"}>{product.title}</h3>
+          <h3 className={"item-model"}>Modelo: {product.model}</h3>
+          <h4 className={"item-price"}>${product.price}</h4>
+          <h6 className={"item-stock"}>Stock: {product.stock} unidades</h6>
 
-          <ItemCount initialValue={1} maxValue={10} onAdd={onAddItem} />
+          <ItemCount initialValue={1} maxValue={15} onAdd={onAddItem} />
 
           <Button
+            className="item-btn"
             content={`Agregar al carrito ${quantity} ${product.model}`}
             callback={addToCart}
           />
