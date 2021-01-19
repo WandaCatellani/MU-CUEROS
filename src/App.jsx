@@ -1,3 +1,4 @@
+import React from "react";
 import "./reset.scss";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { AppProvider } from "./context/CartContext";
@@ -7,6 +8,8 @@ import ItemListContainer from "./components/ItemListContainer/ItemListcontainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./components/Footer/Footer";
 import Cart from "./components/Cart/Cart";
+
+// No me funciono el array
 
 function App() {
   return (

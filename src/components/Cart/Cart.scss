@@ -19,7 +19,6 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: "img titulo cantidad precio eliminar";
     padding: 0 15px;
-    border-bottom: 1px solid hsla(0, 0%, 60%, 0.301);
   }
 
   .cart-list {

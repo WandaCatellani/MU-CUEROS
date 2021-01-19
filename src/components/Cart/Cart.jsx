@@ -1,49 +1,3 @@
-// import React from "react";
-// import useCartContext from "../../context/CartContext";
-// import Button from "../../components/Button/Button";
-// import "./Cart.scss";
-// import { MdDelete } from "react-icons/md";
-
-// const Cart = () => {
-//   const { products, delProduct } = useCartContext();
-
-//   const handleDel = (p) => {
-//     delProduct(p.id);
-//   };
-
-//   return (
-//     <>
-//       <Button content={`Seguir comprando`} path="/" />
-//       <div className="cart container">
-//         <h5>Producto</h5>
-//         <h5>Descripción</h5>
-//         <h5>Precio</h5>
-//         <h5>Cantidad</h5>
-//       </div>
-//       {products.map((product) => (
-//         <div className="cart-list">
-//           <img className="cart-img" src={product.picture} alt="item" />
-
-//           <div className="cart-details">
-//             <h5>{product.title}</h5>
-//             <h5>{product.description}</h5>
-//             <h5>{product.model}</h5>
-//             <h5>{product.quantity}</h5>
-//             <h5>{product.price}</h5>
-//           </div>
-
-//           <MdDelete
-//             className="del-product"
-//             onClick={() => handleDel(product)}
-//           />
-//         </div>
-//       ))}
-//     </>
-//   );
-// };
-
-// export default Cart;
-
 import React from "react";
 import useCartContext from "../../context/CartContext";
 import Button from "../../components/Button/Button";
@@ -66,7 +20,7 @@ const Cart = () => {
           <h5>Descripción</h5>
           <h5>Cantidad</h5>
           <h5>Precio</h5>
-        </div>
+        </div>-
 
         {products.map((product) => (
           <div className="container cart-list">

@@ -3,6 +3,7 @@ import Greeting from "../Greeting/Greeting";
 import ItemList from "./ItemList/ItemList";
 import Spinner from "../Spinner/Spinner";
 import { getProducts } from "../../dataBase/db";
+import Section from "../Section/Section";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -20,10 +21,11 @@ const ItemListContainer = () => {
 
   return (
     <>
+      <Section title="Bienvenidos" />
       <Greeting greeting={"Bienvenidos al mejor e-commerce!"} />
       {loading ? <Spinner /> : <ItemList items={items} />}
     </>
   );
 };
 
-export default ItemListContainer; 
+export default ItemListContainer;
