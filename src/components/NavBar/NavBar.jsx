@@ -16,7 +16,7 @@ const NavBar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <NavLink className="navLink" to="/">
-            Home
+            Inicio
           </NavLink>
           <NavLink className="navLink" to="#">
             Contacto
