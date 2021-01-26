@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Greeting from "../Greeting/Greeting";
 import ItemList from "./ItemList/ItemList";
 import Spinner from "../Spinner/Spinner";
-import { getProducts } from "../../dataBase/db";
+import { getProducts } from "../../backend/db";
 import Section from "../Section/Section";
 
 const ItemListContainer = () => {

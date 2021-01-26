@@ -2,6 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 100vh;
+  padding: 4rem;
+
+  h1 {
+    color: hsl(236, 55%, 41%);
+  }
+
+  .cart-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 30vh;
+  }
 }

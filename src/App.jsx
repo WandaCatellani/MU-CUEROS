@@ -6,10 +6,9 @@ import NavBar from "./components/NavBar/NavBar";
 // import Home from "./components/Home/Home";
 import ItemListContainer from "./components/ItemListContainer/ItemListcontainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import CartContainer from "./container/CartContainer/CartContainer";
 import Footer from "./components/Footer/Footer";
-import Cart from "./components/Cart/Cart";
-
-// No me funciono el array
+import CheckoutContainer from "./container/CheckoutContainer/CheckoutContainer";
 
 function App() {
   return (
@@ -26,10 +25,12 @@ function App() {
 
           <Route component={ItemDetailContainer} path="/detail/:id" exact />
 
-          <Route component={Cart} path="/cart" />
+          <Route component={CartContainer} path="/cart" />
 
-          <Route component={Footer} />
+          <Route component={CheckoutContainer} path="/checkout" />
         </Switch>
+
+        <Route component={Footer} />
       </BrowserRouter>
     </AppProvider>
   );

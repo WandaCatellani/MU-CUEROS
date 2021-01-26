@@ -4,22 +4,19 @@ import "../../components/Button/Button.scss";
 import "./CartContainer.scss";
 import Cart from "../../components/Cart/Cart";
 
- const CartContainer = () => {
+// Agregar Section
+const CartContainer = () => {
   const { products } = useCartContext();
-  console.log(products);
+
   return (
     <div className="cartContainer">
       <h1>Carrito</h1>
       {products.length === 0 ? (
-        <div className="cart-vacio">
+        <div className="cart-body">
           <h3 className="titulo">
             No tienes productos en tu carrito actualmente
           </h3>
-          <Button
-            path="/"
-            content="Volver a comprar"
-            className="btn-add"
-          />
+          <Button path="/" content="Volver a Home" className="btn-add" />
         </div>
       ) : (
         <div>
@@ -28,6 +25,5 @@ import Cart from "../../components/Cart/Cart";
       )}
     </div>
   );
-}
-// Agregar Section
-export default CartContainer
+};
+export default CartContainer;

@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-// Crear archivo
+  /* CREAR ARCHIVO
+-------------------------------------------------- */
 :root {
   --color-principal: hsla(271, 92%, 44%, 0.603);
   --color-secundario: #c592e6;
@@ -42,10 +43,10 @@ a {
   text-decoration: none;
 }
 
-// ol,
-// ul {
-//   list-style: none;
-// }
+ol,
+ul {
+  list-style: none;
+}
 
 blockquote,
 q {

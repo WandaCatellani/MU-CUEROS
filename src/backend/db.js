@@ -1,8 +1,10 @@
-import { getFirestore } from "../firebase/Firebase";
+import { getFirestore } from "./firebase/Firebase";
 
+/* PRODUCTS
+-------------------------------------------------- */
 export function getProducts() {
   return new Promise((resolve, reject) => {
-    const query = getFirestore().collection("item").limit(8);
+    const query = getFirestore().collection("item").limit(10);
     // Pedimos los datos
     query.get().then((response) => {
       if (response.size === 0) reject("Empty");
@@ -15,10 +17,24 @@ export function getProducts() {
   });
 }
 
-/* export function getCategoryCarteras() {
+export function getProductsById(id) {
   return new Promise((resolve, reject) => {
-    const query = getFirestore().collection("carteras").limit(8);
- 
+    const query = getFirestore().collection("item").doc(id);
+    // Pedimos los datos
+    query.get().then((response) => {
+      if (response.size === 0) reject("Empty");
+      const data = { ...response.data(), id: response.id };
+      resolve(data);
+    });
+  });
+}
+
+/* CATEGORIES
+-------------------------------------------------- */
+export function getCategory() {
+  return new Promise((resolve, reject) => {
+    const query = getFirestore().collection("categories");
+
     query.get().then((response) => {
       if (response.size === 0) reject("Empty");
       const data = response.docs.map((doc) => ({
@@ -28,15 +44,20 @@ export function getProducts() {
       resolve(data);
     });
   });
-} */
+}
 
-export function getProductsById(id) {
+export default function getCategoryById(categoryId) {
   return new Promise((resolve, reject) => {
-    const query = getFirestore().collection("item").doc(id);
-    // Pedimos los datos
+    const query = getFirestore()
+      .collection("categories")
+      .where("categoryId", "==", `${categoryId}`);
+
     query.get().then((response) => {
       if (response.size === 0) reject("Empty");
-      const data = { ...response.data(), id: response.id };
+      const data = response.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
       resolve(data);
     });
   });

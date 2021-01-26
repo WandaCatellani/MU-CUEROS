@@ -37,7 +37,10 @@ const Cart = () => {
       <div className="cart-total">
         <h5>Total:</h5>
         <h5>${getGrandTotal()}</h5>
+
+        <Button content={"Comprar"} path={"/checkout"} />
       </div>
+
     </>
   );
 };

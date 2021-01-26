@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail/ItemDetail";
 import Spinner from "../Spinner/Spinner";
-import { getProductsById } from "../../dataBase/db";
+import { getProductsById } from "../../backend/db";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});

@@ -1,20 +1,100 @@
 footer {
-  background-color: lightcoral;
+  background-color: #3f3f3f;
 
   .footer {
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 3rem 0;
+    padding: 3rem 5rem 2rem;
 
-    .redes {
-      font-size: 2rem;
-      color: #fff;
+    .menu {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
       justify-content: space-evenly;
-      padding: 0 1.5rem 2rem;
+      align-items: center;
+
+      li {
+        padding: 0.5rem;
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      align-items: center;
+
+      .icon-inst {
+        font-size: 1.3rem;
+        color: rgba(248, 68, 122, 0.705);
+        padding: 1rem;
+      }
+
+      .icon-face {
+        font-size: 1.3rem;
+        color: #1778f2;
+        padding: 1rem;
+      }
+    }
+
+    /*     .logotipo {
+
+    } */
+  }
+
+  hr {
+    margin: 0 6rem;
+    visibility: visible;
+    border-bottom: 1px solid #fff;
+  }
+
+  .copyright {
+    color: #353535;
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    margin: 2rem 0 1rem;
+
+    p {
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  }
+
+  .created {
+    color: #353535;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 2rem auto;
+
+    p {
+      color: #fff;
+      font-size: 0.8rem;
+      padding-right: 0.5rem;
+      margin: auto 0 auto 0;
+
+      a {
+        color: hsl(188, 78%, 41%);
+        font-style: italic;
+        text-decoration: none;
+
+        &:hover {
+          color: hsl(188, 72%, 52%);
+        }
+      }
+    }
+
+    .icon-github {
+      font-size: 1.3rem;
+      color: #30363d;
+
+      &:hover {
+        color: #8b949e;
+      }
     }
   }
 }
