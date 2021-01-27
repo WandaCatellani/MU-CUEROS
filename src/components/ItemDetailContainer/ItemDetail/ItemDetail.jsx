@@ -24,7 +24,7 @@ const ItemDetail = ({ product }) => {
       <Section title="Detalle de productos" >
         <Button content={"Atras"} path={"/"} className="btn-atras" />
         <div className="text-center m-3 mt-5">
-          <img className="item-img" src={product.picture} alt={"Imagen"} />
+          <img className="img-fluid item-img" src={product.picture} alt={"Imagen"} />
 
           <div className={"itemDetail"}>
             <h3 className={"item-title"}>{product.title}</h3>

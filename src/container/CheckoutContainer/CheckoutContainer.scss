@@ -1,0 +1,51 @@
+.checkout {
+  padding: 5rem 5rem 2rem;
+
+  .formulario {
+    .term-cond {
+      padding: 0.5rem 0;
+    }
+  }
+
+  .detalle {
+    text-align: center;
+
+    h3 {
+      color: #3f3f3f;
+      padding: 0 0 2rem;
+    }
+
+    .resumen {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+    }
+
+    .orden-checkout {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+    }
+
+    .total-checkout {
+      display: flex;
+      justify-content: flex-end;
+      margin: 7rem 0 5rem;
+
+      p {
+        font-size: 1.5rem;
+        padding: 0.5rem 0 0;
+      }
+    }
+
+    .btn-checkout {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+     
+     /*  .btn-seguir {
+
+      } */
+    }
+  }
+}

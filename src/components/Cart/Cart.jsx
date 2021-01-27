@@ -20,7 +20,7 @@ const Cart = () => {
           <h5>Descripción</h5>
           <h5>Cantidad</h5>
           <h5>Precio</h5>
-        </div>-
+        </div>
 
         {products.map((product) => (
           <div className="container cart-list">
@@ -40,7 +40,6 @@ const Cart = () => {
 
         <Button content={"Comprar"} path={"/checkout"} />
       </div>
-
     </>
   );
 };

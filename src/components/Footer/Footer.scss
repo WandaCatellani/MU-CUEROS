@@ -1,49 +1,44 @@
 footer {
-  background-color: #3f3f3f;
+  background-color: hsl(30, 16%, 70%);
 
-  .footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 3rem 5rem 2rem;
+  .subscription {
+    text-align: center;
+    padding: 1rem;
 
-    .menu {
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: space-evenly;
-      align-items: center;
+    h5 {
+      margin: 1rem;
+      display: inline-block;
+      color: #fff;
+      font-weight: 700;
+    }
 
-      li {
-        padding: 0.5rem;
+    .subs-email {
+      display: inline-block;
+      width: 25%;
 
-        a {
-          color: #fff;
+      .input-icon {
+        background: #fff;
+        display: flex;
+        color: #bfb3a7;
+        padding: 0.3rem;
+
+        .input {
+          color: #bfb3a7;
+          border: none;
+          background: none;
+          box-shadow: none;
+          outline: none;
+          padding: 0 1rem;
+          font-size: 0.8rem;
+        }
+
+        .icon-email {
+          color: #000;
+          font-size: 1rem;
+          padding: 0.5rem;
         }
       }
     }
-
-    .links {
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: space-between;
-      align-items: center;
-
-      .icon-inst {
-        font-size: 1.3rem;
-        color: rgba(248, 68, 122, 0.705);
-        padding: 1rem;
-      }
-
-      .icon-face {
-        font-size: 1.3rem;
-        color: #1778f2;
-        padding: 1rem;
-      }
-    }
-
-    /*     .logotipo {
-
-    } */
   }
 
   hr {
@@ -52,16 +47,146 @@ footer {
     border-bottom: 1px solid #fff;
   }
 
+  .menu-footer {
+    padding: 2rem 5rem;
+
+    .enlaces-utiles {
+      display: block;
+      padding-bottom: 1rem;
+
+      h5 {
+        color: #fff;
+        text-align: left;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .h5-hr {
+        margin: 0 12rem 0 0;
+        visibility: visible;
+        border-bottom: 1px solid #fff;
+      }
+
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+
+        li {
+          margin: 0.4rem;
+          display: list-item;
+
+          a {
+            color: #fff;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    .contactenos {
+      display: block;
+      padding-bottom: 1rem;
+
+      h5 {
+        color: #fff;
+        text-align: left;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .h5-hr {
+        margin: 0 12rem 0 0;
+        visibility: visible;
+        border-bottom: 1px solid #fff;
+      }
+
+      .icon-text {
+        height: auto;
+        overflow: hidden;
+        margin-top: 1rem;
+
+        .icon-ubi {
+          font-size: 1rem;
+          color: #fff;
+          margin-right: 0.3rem;
+
+          &:hover {
+            color: red;
+          }
+        }
+
+        .data {
+          overflow: hidden;
+          vertical-align: middle;
+          display: inline-block;
+          color: #fff;
+        }
+
+        .icon-cel {
+          font-size: 1rem;
+          color: #fff;
+          margin-right: 0.3rem;
+
+          &:hover {
+            color: #25d366;
+          }
+        }
+
+        .icon-mail {
+          font-size: 1rem;
+          color: #fff;
+          margin-right: 0.3rem;
+
+          &:hover {
+            color: #3f3f3f;
+          }
+        }
+      }
+    }
+  }
+
   .copyright {
     color: #353535;
     display: flex;
     justify-content: space-evenly;
     justify-content: center;
-    margin: 2rem 0 1rem;
+    margin: 2rem 0 3rem;
 
-    p {
+    .copy p {
       color: #fff;
       font-size: 0.9rem;
+    }
+
+    /*     .logotipo {
+
+    } */
+
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .icon-inst {
+        font-size: 1.3rem;
+        color: hsla(342, 93%, 62%, 0.705);
+        padding: 1rem;
+
+        &:hover {
+          color: hsla(342, 93%, 62%, 0.5);
+        }
+      }
+
+      .icon-face {
+        font-size: 1.3rem;
+        color: hsl(213, 89%, 52%);
+        padding: 1rem;
+
+        &:hover {
+          color: hsla(213, 89%, 52%, 0.705);
+        }
+      }
     }
   }
 

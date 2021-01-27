@@ -12,7 +12,8 @@
   --color-principal: hsla(271, 92%, 44%, 0.603);
   --color-secundario: #c592e6;
   --blanco: #fff;
-  --negro: #333;
+  --negro: #3f3f3f;
+  --whats: #25d366;
 }
 
 html {
@@ -22,6 +23,7 @@ html {
 
 body {
   line-height: 1;
+  background-color: hsla(50, 27%, 87%, 0.51);
 }
 
 article,
