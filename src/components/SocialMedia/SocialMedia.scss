@@ -1,0 +1,27 @@
+.iconos-redes {
+  display: inline-block;
+  vertical-align: middle;
+
+  button {
+    font-size: 2rem;
+    width: 45px;
+  }
+
+  .insta-you {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 45px;
+
+    .instagram {
+      font-size: 2rem;
+    }
+
+    .youtube {
+      font-size: 2rem;
+    }
+
+    .linkedin {
+      font-size: 2rem;
+    }
+  }
+}

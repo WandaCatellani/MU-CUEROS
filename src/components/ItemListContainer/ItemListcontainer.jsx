@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import Greeting from "../Greeting/Greeting";
+// import Greeting from "../Greeting/Greeting";
 import ItemList from "./ItemList/ItemList";
 import Spinner from "../Spinner/Spinner";
 import { getProducts } from "../../backend/db";
-import Section from "../Section/Section";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -16,13 +15,12 @@ const ItemListContainer = () => {
         setItems(res);
         setLoading(false);
       });
-    }, 1000);
+    }, 500);
   }, []);
 
   return (
     <>
-      <Section title="Bienvenidos" />
-      <Greeting greeting={"Bienvenidos al mejor e-commerce!"} />
+      {/* <Greeting greeting={"Bienvenidos"} /> */}
       {loading ? <Spinner /> : <ItemList items={items} />}
     </>
   );

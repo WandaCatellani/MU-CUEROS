@@ -147,6 +147,7 @@ const CheckoutContainer = () => {
             <h4>Producto</h4>
             <h4>Cantidad</h4>
             <h4>Precio</h4>
+            <h4>Id Producto</h4>
           </div>
 
           {products.map((product) => {
@@ -155,6 +156,7 @@ const CheckoutContainer = () => {
                 <h4>{product.model}</h4>
                 <h4>{product.quantity}</h4>
                 <h4>${product.price}</h4>
+                <h4>{orderId}</h4>
               </div>
             );
           })}

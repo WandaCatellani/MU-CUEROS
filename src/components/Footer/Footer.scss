@@ -1,9 +1,10 @@
-footer {
+#footer {
   background-color: hsl(30, 16%, 70%);
+  position: relative;
 
   .subscription {
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0 0;
 
     h5 {
       margin: 1rem;
@@ -30,6 +31,10 @@ footer {
           outline: none;
           padding: 0 1rem;
           font-size: 0.8rem;
+
+          &:focus {
+            border: none;
+          }
         }
 
         .icon-email {
@@ -48,7 +53,7 @@ footer {
   }
 
   .menu-footer {
-    padding: 2rem 5rem;
+    padding: 2rem 5rem 0;
 
     .enlaces-utiles {
       display: block;
@@ -70,7 +75,7 @@ footer {
 
       ul {
         list-style: none;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
 
         li {
           margin: 0.4rem;
@@ -105,7 +110,7 @@ footer {
       .icon-text {
         height: auto;
         overflow: hidden;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
 
         .icon-ubi {
           font-size: 1rem;
@@ -149,19 +154,18 @@ footer {
 
   .copyright {
     color: #353535;
-    display: flex;
-    justify-content: space-evenly;
-    justify-content: center;
-    margin: 2rem 0 3rem;
+    margin: 1.5rem 0;
 
-    .copy p {
-      color: #fff;
-      font-size: 0.9rem;
+    .copy {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        color: #fff;
+        font-size: 0.9rem;
+      }
     }
-
-    /*     .logotipo {
-
-    } */
 
     .links {
       display: flex;
@@ -194,7 +198,7 @@ footer {
     color: #353535;
     display: flex;
     justify-content: flex-end;
-    margin: 0 0 2rem auto;
+    margin: 0 0 1rem auto;
 
     p {
       color: #fff;

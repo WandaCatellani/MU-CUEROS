@@ -4,18 +4,19 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "./NavBar.scss";
 import CartWidget from "../CartWidget/CartWidget";
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/images/logo.jpg";
 
 const NavBar = () => {
   return (
     <Navbar className="nav" expand="md">
       <NavLink to="/" className="navLogo">
-        Logo
+        <img src= {logo} alt="logo"/>
       </NavLink>
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="mr-auto"> 
           <NavLink className="navLink" to="/">
             Home
           </NavLink>

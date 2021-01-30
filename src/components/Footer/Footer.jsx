@@ -5,10 +5,12 @@ import { SiInstagram } from "react-icons/si";
 import { FaFacebook, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { MdMailOutline, MdLocationOn } from "react-icons/md";
 import "./Footer.scss";
+import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.jpg";
 
 const Footer = () => {
   return (
-    <footer className="container-fluid">
+    <footer id="footer" className="container-fluid">
       <Container>
         <Row className="subscription">
           <Col>
@@ -83,7 +85,9 @@ const Footer = () => {
                 <FaWhatsapp />
               </a>
 
-              <a href="tel:+" className="data" target="blank">cel</a>
+              <a href="tel:+" className="data" target="blank">
+                cel
+              </a>
             </div>
 
             <div className="icon-text">
@@ -147,17 +151,17 @@ const Footer = () => {
         </Row>
 
         <Row className="copyright">
-          <Col xs={12} md={4} className="copy">
+          <Col xs={12} md={5} className="copy">
             <p>&copy; 2020 Todos los Derechos Reservados</p>
           </Col>
 
-          <Col xs={12} md={4} className="logotipo">
-            <a href=".">
-              <img src="https://" className="logoooo" alt="logo" />
-            </a>
+          <Col xs={12} md={2} className="logotipo">
+            <Link to="/" className="logo">
+            <img className="img-fluid" src= {logo} alt="logo"/>
+            </Link>
           </Col>
 
-          <Col xs={12} md={4} className="links">
+          <Col xs={12} md={5} className="links">
             <a
               href="https://www.instagram.com/mucueros/"
               className="icon-inst"
