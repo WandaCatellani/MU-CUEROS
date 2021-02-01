@@ -1,10 +1,11 @@
 import React from "react";
-import spinner from "../../spinner.gif"
+import spinner from "../../assets/spinner.gif";
+import "./Spinner.scss";
 
 const Spinner = () => {
   return (
-    <div>
-      <img src={spinner} alt="loading" />
+    <div className="container spinner">
+      <img className="img-fliud spinner-img" src={spinner} alt="loading" />
     </div>
   );
 };

@@ -1,14 +1,19 @@
 import React from "react";
 import "./Home.scss";
 import SocialMedia from "../../components/SocialMedia/SocialMedia";
-import Imagenes from "../../components/Carousel/Carousel";
-// import ItemListContainer from ""
+// import Imagenes from "../../components/Carousel/Carousel";
+import ItemListContainer from "../../container/ItemListContainer/ItemListcontainer";
+import BackgroundHome from "../../assets/images/mochilas/a4.jpg";
 
 const Home = () => {
   return (
     <div className="home">
       <SocialMedia />
-      <Imagenes />
+      {/* <Imagenes /> */}
+      <div className="imagen-home">
+        <img className="fondo" src={BackgroundHome} alt="" />
+      </div>
+      <ItemListContainer />
     </div>
   );
 };

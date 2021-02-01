@@ -46,7 +46,7 @@ export function getCategory() {
   });
 }
 
-export default function getCategoryById(categoryId) {
+export function getCategoryById(categoryId) {
   return new Promise((resolve, reject) => {
     const query = getFirestore()
       .collection("categories")

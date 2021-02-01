@@ -3,11 +3,11 @@ import { Row, Col } from "react-bootstrap";
 import VanillaTilt from "vanilla-tilt";
 import Swal from "sweetalert2";
 import "./ItemDetail.scss";
-import Button from "../../Button/Button";
-import ItemCount from "../../ItemCount/ItemCount";
+import Button from "../Button/Button";
+import ItemCount from "../ItemCount/ItemCount";
 import { useState } from "react";
-import useCartContext from "../../../context/CartContext";
-import Section from "../../Section/Section";
+import useCartContext from "../../context/CartContext";
+import Section from "../Section/Section";
 
 const ItemDetail = ({ product, options, ...rest }) => {
   const [quantity, setQuantity] = useState(1);

@@ -7,10 +7,12 @@ import useCartContext from "../../context/CartContext";
 const CartWidget = () => {
   const { productsCount } = useCartContext();
   return (
-    <Link to="/cart" className="cartIcon">
-      <IoMdCart />
-      <span>{productsCount()}</span>
-    </Link>
+    <>
+      <Link to="/cart" className="cartIcon">
+        <IoMdCart />
+      </Link>
+      <span className="number-cart">{productsCount()}</span>
+    </>
   );
 };
 

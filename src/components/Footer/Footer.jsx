@@ -7,6 +7,7 @@ import { MdMailOutline, MdLocationOn } from "react-icons/md";
 import "./Footer.scss";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.jpg";
+import dataFiscal from "../../assets/images/data-fiscal.jpg";
 
 const Footer = () => {
   return (
@@ -49,21 +50,21 @@ const Footer = () => {
             <hr className="h5-hr" />
 
             <ul>
-              <li>
-                <a href=".">Sucursal</a>
-              </li>
+              <Link className="li" to="/">
+                Atención al Cliente
+              </Link>
 
-              <li>
-                <a href=".">Contáctenos</a>
-              </li>
+              <Link className="li" to="/">
+                Cambios y devoluciones
+              </Link>
 
-              <li>
-                <a href=".">¿Cómo realizo mi compra?</a>
-              </li>
+              <Link className="li" to="/">
+                Información de Envíos
+              </Link>
 
-              <li>
-                <a href=".">Cambios</a>
-              </li>
+              <Link className="li" to="/">
+                Medios de Pago
+              </Link>
             </ul>
           </Col>
 
@@ -77,7 +78,7 @@ const Footer = () => {
                 <MdLocationOn />
               </a>
 
-              <div className="data">Córdoba</div>
+              <p className="data">Córdoba</p>
             </div>
 
             <div className="icon-text">
@@ -101,52 +102,36 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col xs={12} md={3} className=".">
-            <h5>Enlaces Útiles</h5>
+          <Col xs={12} md={3} className="institucional">
+            <h5>Institucional</h5>
 
             <hr className="h5-hr" />
 
             <ul>
-              <li>
-                <a href=".">...</a>
-              </li>
+              <Link className="li" to="/">
+                Quienes Somos
+              </Link>
 
-              <li>
-                <a href=".">...</a>
-              </li>
+              <Link className="li" to="/">
+                Trabaja con Nosotros
+              </Link>
 
-              <li>
-                <a href=".">...</a>
-              </li>
+              <Link className="li" to="/">
+                Contacto
+              </Link>
 
-              <li>
-                <a href=".">...</a>
-              </li>
+              <Link className="li" to="/">
+                Términos y Condiciones
+              </Link>
             </ul>
           </Col>
 
-          <Col xs={12} md={3} className=".">
-            <h5>Enlaces Útiles</h5>
-
-            <hr className="h5-hr" />
-
-            <ul>
-              <li>
-                <a href=".">...</a>
-              </li>
-
-              <li>
-                <a href=".">...</a>
-              </li>
-
-              <li>
-                <a href=".">...</a>
-              </li>
-
-              <li>
-                <a href=".">...</a>
-              </li>
-            </ul>
+          <Col xs={12} md={3} className="dataFiscal">
+            <img
+              src={dataFiscal}
+              className="dataFiscal-img"
+              alt="data fiscal"
+            />
           </Col>
         </Row>
 
@@ -157,7 +142,7 @@ const Footer = () => {
 
           <Col xs={12} md={2} className="logotipo">
             <Link to="/" className="logo">
-            <img className="img-fluid" src= {logo} alt="logo"/>
+              <img className="img-fluid" src={logo} alt="logo" />
             </Link>
           </Col>
 

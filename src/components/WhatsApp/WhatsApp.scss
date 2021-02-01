@@ -1,0 +1,23 @@
+.btn-whats {
+  display: block;
+  position: fixed;
+  width: 60px;
+  height: 70px;
+  bottom: 2rem;
+  left: 1.3rem;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 3rem;
+  z-index: 999;
+  line-height: 80px;
+
+  .icon-w {
+    color: #25d366;
+
+    &:hover {
+      transition: all 0.2s;
+      transform: scale(1.1);
+      color: #e0d7cc;
+    }
+  }
+}

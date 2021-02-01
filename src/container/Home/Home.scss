@@ -1,5 +1,26 @@
 .home {
   height: auto;
+
+  .imagen-home {
+    /* background-image: url(../../assets/images/carteras/100526299_2903880026347859_3200495211050434560_o.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box; */
+    height: 500px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    display: block;
+    margin: 3rem 0;
+
+    .fondo {
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 
 /* .home {

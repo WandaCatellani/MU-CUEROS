@@ -1,4 +1,14 @@
 .cartIcon {
   font-size: 2rem;
-  color: rgb(201, 31, 144);
+  color: #000;
+  padding-right: 0.2rem;
+
+  &:hover {
+    color: hsl(30, 16%, 70%);
+  }
+}
+
+.number-cart {
+  font-size: 1.2rem;
+  padding-bottom: 1.2rem;
 }

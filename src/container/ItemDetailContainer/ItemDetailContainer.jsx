@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ItemDetail from "./ItemDetail/ItemDetail";
-import Spinner from "../Spinner/Spinner";
+import ItemDetail from "../../components/ItemDetail/ItemDetail";
+import Spinner from "../../components/Spinner/Spinner";
 import { getProductsById } from "../../backend/db";
 
 const ItemDetailContainer = () => {
@@ -10,7 +10,6 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    setLoading(true);
     setTimeout(() => {
       getProductsById(id).then((res) => {
         setProduct(res);

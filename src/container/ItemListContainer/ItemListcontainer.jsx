@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 // import Greeting from "../Greeting/Greeting";
-import ItemList from "./ItemList/ItemList";
-import Spinner from "../Spinner/Spinner";
+import ItemList from "../../components/ItemList/ItemList";
+import Spinner from "../../components/Spinner/Spinner";
 import { getProducts } from "../../backend/db";
 
 const ItemListContainer = () => {
@@ -9,7 +9,6 @@ const ItemListContainer = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
     setTimeout(() => {
       getProducts().then((res) => {
         setItems(res);
