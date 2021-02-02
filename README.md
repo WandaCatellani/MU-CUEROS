@@ -1,7 +1,13 @@
 # MU CUEROS 
----
 
 ## E-commerce project made with React, Sass and Firebase.
+
+---
+
+## Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Dependencies
 
@@ -21,13 +27,4 @@
 
 - _vanilla-tilt: 1.7.0_
 
-
-- **NEGRITA**
-- _ITALIC_
-
-
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo 1")
-
-## Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Created by  **Wanda Catellani**

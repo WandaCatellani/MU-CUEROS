@@ -137,7 +137,7 @@ const Footer = () => {
 
         <Row className="copyright">
           <Col xs={12} md={5} className="copy">
-            <p>&copy; 2020 Todos los Derechos Reservados</p>
+            <p>&copy; 2021 Todos los Derechos Reservados</p>
           </Col>
 
           <Col xs={12} md={2} className="logotipo">

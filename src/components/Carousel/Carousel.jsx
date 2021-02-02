@@ -7,8 +7,8 @@ import img3 from "../../assets/images/mochilas/ram.jpg";
 // img-fluid
 const Imagenes = () => {
   return (
-    <Carousel class="carousel-home">
-      <Carousel.Item class="item-c"> 
+    <Carousel className="carousel-home">
+      <Carousel.Item className="item-c"> 
         <img className="d-block w-100" src={img1} alt="First " />
 
         <Carousel.Caption>
@@ -17,7 +17,7 @@ const Imagenes = () => {
         </Carousel.Caption>
       </Carousel.Item>
 
-      <Carousel.Item class="item-c">
+      <Carousel.Item className="item-c">
         <img
           className="d-block w-100 "
           src={img2}
@@ -30,7 +30,7 @@ const Imagenes = () => {
         </Carousel.Caption>
       </Carousel.Item>
 
-      <Carousel.Item class="item-c">
+      <Carousel.Item className="item-c">
         <img className="d-block w-100 " src={img3} alt="Third " />
         
         <Carousel.Caption>
