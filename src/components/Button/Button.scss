@@ -1,7 +1,17 @@
-#Button {
-  color: white;
+#button {
   border: none;
   border-radius: 1.2vw;
   padding: 0.5rem 1rem;
-  background-color: rgba(231, 126, 226, 0.5);
+  color: #fff;
+  background: #bfb3a6;
+  margin: 1rem;
+
+  &:hover {
+    color: #bfb3a6;
+    background: #fff;
+  }
+
+  &:focus {
+    border-color: #bfb3a6;
+  }
 }

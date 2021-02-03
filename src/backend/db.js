@@ -49,7 +49,7 @@ export function getCategory() {
 export function getCategoryById(categoryId) {
   return new Promise((resolve, reject) => {
     const query = getFirestore()
-      .collection("categories")
+      .collection("item")
       .where("categoryId", "==", `${categoryId}`);
 
     query.get().then((response) => {

@@ -21,11 +21,9 @@ const CategoriesContainer = () => {
     <>
       {" "}
       {loading ? (
-        <div className="home">
-          <Spinner />
-        </div>
+        <Spinner />
       ) : (
-        <div id="CategoryContainer" className="categorias">
+        <div className="categoriesContainer">
           <CategoryList categories={category} />
         </div>
       )}

@@ -5,9 +5,10 @@ import Button from "../Button/Button";
 
 const CategoryDetail = ({ product, category }) => {
   return (
-    <div>
-      <h1 className="category__title "> {category}</h1>
-      <div id="CategoryDetail" className="category container">
+    <div className="container">
+      <h1 className="title-category"> {category}</h1>
+
+      <div className="categoryDetail">
         {product ? (
           product.map((product, i) => {
             return <Item item={product} key={i} />;

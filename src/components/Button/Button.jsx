@@ -4,7 +4,7 @@ import './Button.scss';
 const Button = ({ content, path, callback, type }) => {
   return (
     <Link to={path}>
-      <button id='Button' onClick= {callback} type={type}>
+      <button id='button' onClick= {callback} type={type}>
         {content} 
       </button>
     </Link>

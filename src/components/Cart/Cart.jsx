@@ -16,16 +16,20 @@ const Cart = () => {
       <Button id="btn-volver" content={`Seguir comprando`} path="/" />
       <div className="container cart">
         <div className="container card-titles">
-          <h5>Producto</h5>
-          <h5>Descripción</h5>
-          <h5>Cantidad</h5>
-          <h5>Precio</h5>
+          <h5 className="title-product">Producto</h5>
+          <h5 className="title-desc">Descripción</h5>
+          <h5 className="title-cant">Cantidad</h5>
+          <h5 className="title-price">Precio</h5>
         </div>
 
         {products.map((product) => (
           <div className="container cart-list">
-            <img className="cart-img" src={product.picture} alt="item" />
-            <h6 lassName="cart-description">{product.description}</h6>
+            <img
+              className="img-fluid cart-img"
+              src={product.picture}
+              alt="item"
+            />
+            <h6 className="cart-desc">{product.description}</h6>
             <h6 className="cart-count">{product.quantity}</h6>
             <h6 className="cart-price">${product.price}</h6>
 
@@ -34,9 +38,11 @@ const Cart = () => {
         ))}
       </div>
 
-      <div className="cart-total">
-        <h5>Total:</h5>
-        <h5>${getGrandTotal()}</h5>
+      {/* <hr className="hr-cart" /> */}
+
+      <div className="container cart-total">
+        <h5 className="title-total">Total:</h5>
+        <h5 className="total-number">${getGrandTotal()}</h5>
 
         <Button content={"Comprar"} path={"/checkout"} />
       </div>

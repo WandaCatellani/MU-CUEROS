@@ -1,10 +1,3 @@
-// no funciona
-#btn-volver {
-  border-radius: 5%;
-  color: blue;
-  margin: 3rem;
-}
-
 .cart {
   display: flex;
   flex-direction: column;
@@ -12,34 +5,50 @@
   justify-content: center;
   text-align: center;
   width: 80%;
-  margin: 5rem auto;
+  margin: 3rem auto;
 
   .card-titles {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "img titulo cantidad precio eliminar";
-    padding: 0 1.5rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "prod desc desc cant price eliminar";
+    border-bottom: 1px solid hsl(30, 16%, 70%);
+
+    .title-product {
+      grid-area: prod;
+    }
+
+    .title-desc {
+      grid-area: desc;
+    }
+
+    .title-cant {
+      grid-area: cant;
+    }
+
+    .title-price {
+      grid-area: price;
+    }
   }
 
   .cart-list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "img titulo cantidad precio eliminar";
-    margin: 1rem 0;
-    border-bottom: 1px solid hsla(0, 0%, 60%, 0.301);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "img titulo titulo cantidad precio eliminar";
+    margin: 2rem 0 0;
+    gap: 0 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid hsl(30, 16%, 70%);
 
     .cart-img {
       grid-area: img;
-      width: 60%;
+      width: 100%;
       object-fit: cover;
       display: block;
     }
 
-    .cart-description {
+    .cart-desc {
       grid-area: titulo;
-      padding: 2rem 0;
-      // no funciona
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     .cart-count {
@@ -54,21 +63,38 @@
 
     .cart-del {
       grid-area: eliminar;
-      color: rgb(101, 103, 209);
+      color: hsl(30, 16%, 70%);
       cursor: pointer;
       font-size: 1.2rem;
+      margin: 0 0 0 auto;
 
       &:hover {
-        color: rgb(206, 81, 81) (224, 92, 92);
+        color: red;
       }
     }
   }
 }
+
+/* .hr-cart {
+  margin: 0 6rem 5rem;
+  visibility: visible;
+  border-bottom: 1px solid hsla(0, 0%, 60%, 0.301);
+} */
 
 .cart-total {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
   width: 15%;
-  margin: 0 10rem 0 auto;
+  margin: 5rem 10rem 5rem auto;
+  height: 40vh;
+
+  .title-total {
+    margin: 0 0.5rem 0 0;
+  }
+
+  .total-number {
+    margin: 0 2rem 0 0;
+    color: hsl(30, 16%, 70%);
+  }
 }

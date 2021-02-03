@@ -62,9 +62,10 @@ function Item({ item }) {
             <span></span>
             <span></span>
             <span></span>
+            <span></span>
           </div>
           
-          <Button className="btn-card" content={`Ver mas`} path={`/detail/${item.id}`} />
+          <Button className="btn-card" content={`Ver`} path={`/detail/${item.id}`} />
         </div>
       </Link>
     </div>

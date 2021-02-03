@@ -46,8 +46,8 @@
 .cards {
   position: relative;
   width: 300px;
-  height: 400px;
-  margin: 20px 40px;
+  height: 350px;
+  margin: 2rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,32 +62,36 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
-    transition: 05s ease-in-out;
+    padding: 0 2rem;
+    transition: 1s ease-in-out;
 
     .card-img {
       max-width: 100%;
-      margin: 0 0 20px;
-      transition: 05s ease-in-out;
+      margin: 0 0 2rem;
+      transition: 1s ease-in-out;
     }
 
     h3 {
       color: #000;
       font-weight: 600;
+      font-size: 1.4rem;
     }
   }
 
   &:hover .a-img {
     transform: translateY(-100px);
+    margin-bottom: 4rem;
+    text-decoration: none;
   }
 
   &:hover .a-img .card-img {
     transform: translate(-20px, 40px) rotate(-25deg) scale(1.4);
+    margin-bottom: 5rem;
   }
 
   .content {
     position: absolute;
-    bottom: 20px;
+    // padding-top: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,15 +105,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 8px 20px;
+      padding: 1rem 2rem 0;
 
       h4 {
-        color: #fff;
+        color: #111;
         font-weight: 300;
-        font-size: 14px;
+        font-size: 1rem;
         text-transform: uppercase;
         letter-spacing: 2px;
-        margin-right: 10px;
+        margin-right: 1rem;
       }
     }
 
@@ -122,8 +126,8 @@
       color: #111;
       background: #fff;
       border-radius: 4px;
-      font-size: 14px;
-      margin: 0 5px;
+      font-size: 1.4rem;
+      margin: 0 0.5rem;
       transition: 0.5s;
       cursor: pointer;
 
@@ -138,29 +142,32 @@
       background: #f00;
       border-radius: 50%;
       border: 2px solid #fff;
-      margin: 0 5px;
+      margin: 0 0.5rem;
       cursor: pointer;
       box-sizing: border-box;
 
       &:nth-child(2) {
-        background: #9bdc9b;
+        background: #000;
       }
 
       &:nth-child(3) {
-        background: #03a9f4;
+        background: #1850eb;
       }
 
       &:nth-child(4) {
-        background: #e91e63;
+        background: #e91e1e;
+      }
+
+      &:nth-child(5) {
+        background: #bfb3a6;
       }
     }
 
     .btn-card {
       position: relative;
-      top: 10px;
+      top: 1rem;
       display: inline-block;
-      padding: 12px 30px;
-      background: #fff;
+      padding: 1.2rem 3rem;
       border-radius: 40px;
       font-weight: 600;
       letter-spacing: 1px;
@@ -174,5 +181,6 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(-50px);
+    margin-top: 35rem;
   }
 }
