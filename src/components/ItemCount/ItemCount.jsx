@@ -26,7 +26,7 @@ const ItemCount = ({ initialValue, maxValue, onAdd }) => {
   return (
     <>
       <div className="centered itemsCount">
-        <p>{counter}</p>
+        <p className="count-number">{counter}</p>
 
         <Button
           content={"+"}

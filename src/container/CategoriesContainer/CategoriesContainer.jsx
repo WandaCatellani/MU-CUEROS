@@ -23,7 +23,7 @@ const CategoriesContainer = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className="categoriesContainer">
+        <div className="container categoriesContainer">
           <CategoryList categories={category} />
         </div>
       )}

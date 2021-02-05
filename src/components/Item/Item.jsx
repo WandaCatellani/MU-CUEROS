@@ -36,7 +36,6 @@ function Item({ item }) {
 export default Item; */
 
 import React from "react";
-// import Card from "react-bootstrap/Card";
 // import { MdAddShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
@@ -51,14 +50,14 @@ function Item({ item }) {
 
         <div className="content">
           <div className="size">
-            <h4>Size :</h4>
+            <h4>Size</h4>
             <span>S</span>
             <span>M</span>
             <span>L</span>
           </div>
 
           <div className="colour">
-            <h4>Color :</h4>
+            <h4>Color</h4>
             <span></span>
             <span></span>
             <span></span>

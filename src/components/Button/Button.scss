@@ -1,14 +1,22 @@
 #button {
-  border: none;
-  border-radius: 1.2vw;
-  padding: 0.5rem 1rem;
-  color: #fff;
-  background: #bfb3a6;
+  // border: none;
+  // border-radius: 1.2vw;
+  // padding: 0.5rem 1rem;
+  // color: #fff;
+  // background: #bfb3a6;
   margin: 1rem;
+  border: 2px solid hsl(30, 16%, 70%);
+  border-bottom-right-radius: 200px;
+  border-top-left-radius: 200px;
+  padding: 1rem 2.5rem 1rem 2.5rem;
+  background: #fff;
+  color: #bfb3a6;
 
   &:hover {
-    color: #bfb3a6;
-    background: #fff;
+    // color: #bfb3a6;
+    // background: #fff;
+    color: #fff;
+    background: #bfb3a6;
   }
 
   &:focus {

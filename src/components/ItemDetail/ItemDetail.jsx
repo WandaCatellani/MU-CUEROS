@@ -1,13 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Row, Col } from "react-bootstrap";
 import VanillaTilt from "vanilla-tilt";
 import Swal from "sweetalert2";
 import "./ItemDetail.scss";
 import Button from "../Button/Button";
 import ItemCount from "../ItemCount/ItemCount";
-import { useState } from "react";
 import useCartContext from "../../context/CartContext";
 import Section from "../Section/Section";
+// import { MdAddShoppingCart } from "react-icons/md";
 
 const ItemDetail = ({ product, options, ...rest }) => {
   const [quantity, setQuantity] = useState(1);
@@ -43,34 +43,29 @@ const ItemDetail = ({ product, options, ...rest }) => {
     <Section title="Detalle de productos">
       <Button content={"Atras"} path={"/"} className="btn-atras" />
       <Row className="detail">
-        <Col xs={12} md={4}>
-          <div ref={tilt} {...rest} className="m-5 detail-item">
-            <img
-              className="img-fluid item-img"
-              src={product.picture}
-              alt={"Imagen"}
+        <Col xs={12} md={5} ref={tilt} {...rest} className="detail-item">
+          <img className="item-img" src={product.picture} alt={"Imagen"} />
+
+          <div className={"itemDetail"}>
+            <h3 className={"item-title"}>{product.title}</h3>
+
+            <ItemCount initialValue={1} maxValue={15} onAdd={onAddItem} />
+
+            <Button
+              className="item-btn"
+              content={`Agregar al Carrito ${quantity} ${product.title}`}
+              callback={addToCart}
             />
 
-            <div className={"itemDetail"}>
-              <h3 className={"item-title"}>{product.title}</h3>
-              <h3 className={"item-model"}>Modelo: {product.model}</h3>
-
-              <ItemCount initialValue={1} maxValue={15} onAdd={onAddItem} />
-
-              <Button
-                className="item-btn"
-                content={`Agregar al carrito ${quantity} ${product.model}`}
-                callback={addToCart}
-              />
-            </div>
+            {/* <MdAddShoppingCart /> */}
           </div>
         </Col>
 
-        <Col xs={12} md={8} className="desc-item">
-          <h3>Description</h3>
+        <Col xs={12} md={7} className="desc-item">
+          <h3>Descripción</h3>
           <hr />
           <h4 className={"item-price"}>${product.price}</h4>
-          <h6 className={"item-stock"}>Stock: {product.stock} unidades</h6>
+          {/*  <h6 className={"item-stock"}>Stock: {product.stock} unidades</h6> */}
           <p>{product.description}</p>
         </Col>
       </Row>

@@ -44,21 +44,6 @@ const NavBar = () => {
 
           <NavLink className="navLink" to="/categories">
             Tienda
-            {/* <ul>
-            {categories.length > 0
-              ? categories.map((category) => {
-                  return (
-                    <NavLink
-                      className="nav-link"
-                      to={`/categorias/${category.key}`}
-                      key={category.id}
-                    >
-                      {category.key}
-                    </NavLink>
-                  );
-                })
-              : null}
-            </ul> */}
           </NavLink>
 
           <NavDropdown title="TIENDA" id="basic-nav-dropdown">
@@ -66,7 +51,7 @@ const NavBar = () => {
               ? categories.map((category) => {
                   return (
                     <NavLink
-                      className="nav-link"
+                      className="navLink"
                       to={`/categorias/${category.key}`}
                       key={category.id}
                     >
@@ -75,18 +60,21 @@ const NavBar = () => {
                   );
                 })
               : null}
-            {/* <NavLink to={`/categoty/${categoria.key}`}>{categoria.key}</NavLink>
-            <NavLink to={`/categoty/${categoria.key}`}>{category.key}</NavLink>
-            <NavLink to={`/categoty/${categoria.key}`}>{category.key}</NavLink>
-            <NavDropdown.Divider />
-            <NavLink to={"/categories"}>Ver Mas</NavLink> */}
           </NavDropdown>
 
-          <NavLink className="navLink" to="#">
-            Sobre Nosotros
+{/*           <NavDropdown title="TIENDA" id="basic-nav-dropdown">
+            <NavLink to={`/categoty/${categories.key}`}>{categories.key}</NavLink>
+            <NavLink to={`/categoty/${categories.key}`}>{categories.key}</NavLink>
+            <NavLink to={`/categoty/${categories.key}`}>{categories.key}</NavLink>
+            <NavDropdown.Divider />
+            <NavLink to={"/categories"}>Ver Mas</NavLink>
+          </NavDropdown> */}
+
+          <NavLink className="navLink" to="/">
+            Nosotros
           </NavLink>
 
-          <NavLink className="navLink" to="#">
+          <NavLink className="navLink" to="/">
             Contacto
           </NavLink>
         </Nav>
@@ -102,16 +90,19 @@ export default NavBar;
   <ul>
     <li>
       <div>Categorias</div>
-      <div>
+      <div className="lista">
         <Link to={`/categories/key1`}>
           <div>key1</div>
         </Link>
+
         <Link to={`/categories/key2`}>
           <div>key1</div>
         </Link>
+
         <Link to={`/categories/key3`}>
           <div>key1</div>
         </Link>
+
       </div>
     </li>
   </ul>

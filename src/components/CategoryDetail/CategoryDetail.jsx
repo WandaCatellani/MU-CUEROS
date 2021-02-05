@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 
 const CategoryDetail = ({ product, category }) => {
   return (
-    <div className="container">
+    <div className="container categoryDetail">
       <h1 className="title-category"> {category}</h1>
 
       <div className="categoryDetail">
@@ -14,9 +14,10 @@ const CategoryDetail = ({ product, category }) => {
             return <Item item={product} key={i} />;
           })
         ) : (
-          <div>
+          <div className="vacio">
             <h3>Actualmente no tienes artículos en esta {category}</h3>
-            <Button path="/" content="Volver a comprar" />
+
+            <Button path="/categories" content="Volver a comprar" />
           </div>
         )}
       </div>
