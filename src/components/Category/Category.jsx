@@ -29,7 +29,7 @@ export default function Category({ category }) {
           <Button
             className={"btn-category"}
             content={category.description}
-            path={category.key}
+            path={`/categories/${category.key}`}
           />
         </div>
       </Link>

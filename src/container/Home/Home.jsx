@@ -1,16 +1,18 @@
 import React from "react";
 import "./Home.scss";
-// import Imagenes from "../../components/Carousel/Carousel";
+import Imagenes from "../../components/Carousel/Carousel";
 import ItemListContainer from "../../container/ItemListContainer/ItemListcontainer";
-import BackgroundHome from "../../assets/images/mochilas/a4.jpg";
+// import BackgroundHome from "../../assets/images/mochilas/a4.jpg";
 
 const Home = () => {
   return (
     <div className="home">
-      {/* <Imagenes /> */}
-      <div className="imagen-home">
+      <Imagenes />
+      {/* <div className="imagen-home">
         <img className="fondo" src={BackgroundHome} alt="" />
-      </div>
+      </div> */}
+      <h1>MU CUEROS</h1>
+      <p>Cuero 100% vacuno</p>
       <ItemListContainer />
     </div>
   );
@@ -18,4 +20,4 @@ const Home = () => {
 
 export default Home;
 
-//  Somos una empresa especializada en la creación de bolsos, carteras y mochilas en cuero 100% vacuno.
+// 

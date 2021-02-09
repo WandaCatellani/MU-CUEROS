@@ -13,7 +13,7 @@ const Cart = () => {
 
   return (
     <>
-      <Button id="btn-volver" content={`Seguir comprando`} path="/" />
+      <Button id="btn-volver" content={`Seguir comprando`} path="/categories" />
       <div className="container cart">
         <div className="container card-titles">
           <h5 className="title-product">Producto</h5>

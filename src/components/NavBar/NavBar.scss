@@ -19,9 +19,11 @@
     color: #000;
     padding: 0.5rem 1.5rem 0;
     text-decoration: none;
+    position: relative;
 
-    &:hover {
-      color: #000;
+    &:hover .navLinkDropdown {
+      display: block;
+      // margin-bottom: 0.5rem;
     }
 
     &:after {
@@ -36,9 +38,44 @@
       width: 0;
       margin-top: 5px;
     }
+
     &:hover:after {
       width: 100%;
       left: 0;
+    }
+
+    .navLinkDropdown {
+      position: absolute;
+      display: none;
+      margin-top: 0.5rem;
+      background-color: #fff;
+      padding: 0.5rem 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+      .navLinkA {
+        display: block;
+        padding: 0.5rem 0;
+        text-decoration: none;
+        color: #000;
+
+        &:after {
+          background: none repeat scroll 0 0 transparent;
+          bottom: 0;
+          content: "";
+          display: block;
+          height: 2px;
+          left: 50%;
+          background-color: hsl(30, 16%, 70%);
+          transition: width 0.3s ease 0s, left 0.3s ease 0s;
+          width: 0;
+          margin-top: 5px;
+        }
+
+        &:hover:after {
+          width: 100%;
+          left: 0;
+        }
+      }
     }
   }
 }

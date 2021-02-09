@@ -87,7 +87,7 @@ const Footer = () => {
               </a>
 
               <a href="tel:+" className="data" target="blank">
-                cel
+                Teléfono Móvil
               </a>
             </div>
 

@@ -6,12 +6,9 @@
 
   .title-categoryContainer {
     font-size: 2.5rem;
-    color: --negro;
+    color: hsl(30, 16%, 70%);
     z-index: 2;
-    border: 2px solid hsl(30, 16%, 70%);
-    border-bottom-right-radius: 200px;
-    border-top-left-radius: 200px;
-    padding: 1rem 2.5rem 1rem 2.5rem;
+    padding: 1rem;
     margin: 0 auto 0 0;
   }
 

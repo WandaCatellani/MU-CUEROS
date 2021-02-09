@@ -6,21 +6,10 @@ import { Form, Col, Row } from "react-bootstrap";
 import "./CheckoutContainer.scss";
 
 const CheckoutContainer = () => {
-  const [validated, setValidated] = useState(false);
   const { products, getGrandTotal } = useCartContext();
   const [orderId, setOrderId] = useState();
   const db = getFirestore();
   const orders = db.collection("orders");
-
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
-    setValidated(true);
-  };
 
   const Compra = () => {
     let precioTotal = getGrandTotal(products);
@@ -59,63 +48,44 @@ const CheckoutContainer = () => {
     <div className="container checkout">
       <Row>
         <Col xs={12} md={5} className="formulario">
-          <Form
-            noValidate
-            validated={validated}
-            onSubmit={handleSubmit}
-            className="form"
-          >
+          <Form className="form">
             <Form.Row>
-              <Form.Group as={Col} md="12" controlId="validationCustom01">
+              <Form.Group as={Col} md="12" controlId="formGridName">
                 <Form.Label>Nombre</Form.Label>
                 <Form.Control type="text" id="name" required />
-                <Form.Control.Feedback>Good!</Form.Control.Feedback>
               </Form.Group>
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col} md="12" controlId="validationCustom02">
+              <Form.Group as={Col} md="12" controlId="formGridName">
                 <Form.Label>Apellido</Form.Label>
                 <Form.Control type="text" id="surname" required />
-                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
               </Form.Group>
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col} md="12" controlId="validationCustom03">
+              <Form.Group as={Col} md="12" controlId="formGridEmail">
                 <Form.Label>Email</Form.Label>
                 <Form.Control type="email" id="email" required />
-                <Form.Control.Feedback type="invalid">
-                  Please provide a valid mail.
-                </Form.Control.Feedback>
               </Form.Group>
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col} md="12" controlId="validationCustom04">
-                <Form.Label>Address</Form.Label>
+              <Form.Group as={Col} md="12" controlId="formGridAddress1">
+                <Form.Label>Dirección</Form.Label>
                 <Form.Control type="text" id="address" required />
-                <Form.Control.Feedback type="invalid">
-                  Please provide a valid Address.
-                </Form.Control.Feedback>
               </Form.Group>
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col} md="6" controlId="validationCustom05">
+              <Form.Group as={Col} md="6" controlId="formGridState">
                 <Form.Label>Estado</Form.Label>
                 <Form.Control type="text" id="state" required />
-                <Form.Control.Feedback type="invalid">
-                  Please provide a valid state.
-                </Form.Control.Feedback>
               </Form.Group>
 
-              <Form.Group as={Col} md="6" controlId="validationCustom06">
+              <Form.Group as={Col} md="6" controlId="formGridZip">
                 <Form.Label>Zip</Form.Label>
                 <Form.Control type="text" id="zip" required />
-                <Form.Control.Feedback type="invalid">
-                  Please provide a valid zip.
-                </Form.Control.Feedback>
               </Form.Group>
             </Form.Row>
 
@@ -135,34 +105,36 @@ const CheckoutContainer = () => {
               content={"Finalizar Compra"}
               callback={() => Compra()}
             />
-            {/* Así no funciona para validar */}
-            {/* <Button type={"submit"} content={"Finalizar Compra"} callback={() => Compra()} /> */}
           </Form>
         </Col>
 
         <Col xs={12} md={7} className="detalle">
           <h3>Resumen de tu Orden</h3>
 
-          <div className={"resumen"}>
-            <h4>Producto</h4>
-            <h4>Cantidad</h4>
-            <h4>Precio</h4>
-            <h4>Id Producto</h4>
+          <div className="titles-checkout">
+            <h5 className="title-pro">Producto</h5>
+            <h5 className="title-can">Cantidad</h5>
+            <h5 className="title-pr">Precio</h5>
+            <h5 className="title-id">Id Producto</h5>
           </div>
 
           {products.map((product) => {
             return (
               <div key={product.id} className={"orden-checkout"}>
-                <h4>{product.model}</h4>
-                <h4>{product.quantity}</h4>
-                <h4>${product.price}</h4>
-                <h4>{orderId}</h4>
+                <img
+                  className="img-fluid checkout-image"
+                  src={product.picture}
+                  alt="prod"
+                />
+                <h6 className="checkout-q">{product.quantity}</h6>
+                <h6 className="checkout-pr">${product.price}</h6>
+                <h6 className="checkout-id">{orderId}</h6>
               </div>
             );
           })}
 
           <div className={"total-checkout"}>
-            <h4>Total</h4>
+            <h4>Total:</h4>
             <p>${getGrandTotal()}</p>
           </div>
 

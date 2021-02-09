@@ -8,44 +8,92 @@
   }
 
   .detalle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    width: 80%;
 
     h3 {
-      color: #3f3f3f;
-      padding: 0 0 2rem;
+      margin-bottom: 3rem;
+      color: hsl(30, 16%, 70%);
     }
 
-    .resumen {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-evenly;
+    .titles-checkout {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "pro can pr id";
+      border-bottom: 1px solid hsl(30, 16%, 70%);
+      gap: 0 0.5rem;
+      margin-left: 1.5rem;
+
+      .checkout-pro {
+        grid-area: pro;
+      }
+
+      .checkout-can {
+        grid-area: can;
+      }
+
+      .checkout-pr {
+        grid-area: pr;
+      }
+
+      .checkout-id {
+        grid-area: id;
+      }
     }
 
     .orden-checkout {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-evenly;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "image q pr id";
+      margin: 1rem 0 0;
+      gap: 0 0.5rem;
+      margin-left: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid hsl(30, 16%, 70%);
+
+      .checkout-image {
+        grid-area: image;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        overflow: hidden;
+      }
+
+      .checkout-q {
+        grid-area: q;
+        font-size: 1rem;
+        padding-top: 1rem;
+      }
+
+      .checkout-pr {
+        grid-area: pr;
+        padding-top: 1rem;
+      }
+
+      .checkout-id {
+        grid-area: id;
+        font-size: 1rem;
+      }
     }
 
     .total-checkout {
       display: flex;
-      justify-content: flex-end;
-      margin: 7rem 0 5rem;
+      justify-content: center;
+      margin: 5rem 0 3rem auto;
+
+      h4 {
+        margin: 0 0.5rem 0 0;
+      }
 
       p {
         font-size: 1.5rem;
-        padding: 0.5rem 0 0;
+        padding: 0.2rem 0 0;
+        color: hsl(30, 16%, 70%);
       }
-    }
-
-    .btn-checkout {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-evenly;
-     
-     /*  .btn-seguir {
-
-      } */
     }
   }
 }

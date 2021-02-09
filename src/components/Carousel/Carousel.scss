@@ -1,44 +1,38 @@
 .carousel-home {
-  height: 505px;
+  height: 90vh;
   padding: 0;
+  z-index: 25;
 
-  .item-c {
-    width: 100%;
-    height: 600px;
-    padding: 0 15px;
-    max-width: 992px;
+  .carousel-inner {
+    height: 100%;
+
+    .imagen {
+      height: 100%;
+      overflow: hidden;
+      cursor: pointer;
+
+      img {
+        height: 100%;
+      }
+    }
   }
-  //   .carousel-item {
-  //     width: 100%;
-  //     height: 100%;
-  //     overflow: hidden;
-  //     cursor: pointer;
 
-  //     img {
-  //       width: 100%;
-  //       height: 100%;
-  //       object-fit: cover;
-  //       display: block;
-  //     }
-  //   }
-  // }
+  .carousel-indicators {
+    background-color: #fff;
+    line-height: 30px;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    right: 0;
+    bottom: -30px;
 
-  // .indicators {
-  //   background-color: #fff;
-  //   line-height: 30px;
-  //   width: 100%;
-  //   margin: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: -30px;
-
-  //   li {
-  //     background-color: hsl(30, 16%, 70%);
-  //     width: 10px;
-  //     height: 10px;
-  //     margin: 10px;
-  //     border: none;
-  //     border-radius: 10px;
-  //   }
-  // }
+    li {
+      background-color: hsl(30, 16%, 70%);
+      width: 10px;
+      height: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+    }
+  }
 }

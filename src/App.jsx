@@ -3,8 +3,8 @@ import "./reset.scss";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { AppProvider } from "./context/CartContext";
 import NavBar from "./components/NavBar/NavBar";
-// import Home from "./container/Home/Home";
-import ItemListContainer from "./container/ItemListContainer/ItemListcontainer";
+import Home from "./container/Home/Home";
+// import ItemListContainer from "./container/ItemListContainer/ItemListcontainer";
 import ItemDetailContainer from "./container/ItemDetailContainer/ItemDetailContainer";
 import CategoriesContainer from "./container/CategoriesContainer/CategoriesContainer";
 import CategoriesDetailContainer from "./container/CategoriesDetailContainer/CategoriesDetailContainer";
@@ -27,12 +27,13 @@ function App() {
         <NavBar />
 
         <Switch>
-          {/* <Route component={Home} path="/" exact /> */}
-          <Route component={ItemListContainer} path="/" exact />
+          <Route component={Home} path="/" exact />
+          
+          {/* <Route component={ItemListContainer} path="/" exact /> */}
 
-          <Route path="/category/:id">
+          {/* <Route path="/category/:id">
             <ItemListContainer />
-          </Route>
+          </Route> */}
 
           <Route
             component={ItemDetailContainer}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import NavDropdown from "react-bootstrap/NavDropdown";
+// import NavDropdown from "react-bootstrap/NavDropdown";
 import "./NavBar.scss";
 import CartWidget from "../CartWidget/CartWidget";
 import { NavLink } from "react-router-dom";
@@ -44,34 +44,25 @@ const NavBar = () => {
 
           <NavLink className="navLink" to="/categories">
             Tienda
+            <ul className="navLinkDropdown">
+              {categories.length > 0
+                ? categories.map((category) => {
+                    return (
+                      <NavLink
+                        className="navLinkA"
+                        to={`/categories/${category.key}`}
+                        key={category.id}
+                      >
+                        {category.key}
+                      </NavLink>
+                    );
+                  })
+                : null}
+            </ul>
           </NavLink>
 
-          <NavDropdown title="TIENDA" id="basic-nav-dropdown">
-            {categories.length > 0
-              ? categories.map((category) => {
-                  return (
-                    <NavLink
-                      className="navLink"
-                      to={`/categorias/${category.key}`}
-                      key={category.id}
-                    >
-                      {category.key}
-                    </NavLink>
-                  );
-                })
-              : null}
-          </NavDropdown>
-
-{/*           <NavDropdown title="TIENDA" id="basic-nav-dropdown">
-            <NavLink to={`/categoty/${categories.key}`}>{categories.key}</NavLink>
-            <NavLink to={`/categoty/${categories.key}`}>{categories.key}</NavLink>
-            <NavLink to={`/categoty/${categories.key}`}>{categories.key}</NavLink>
-            <NavDropdown.Divider />
-            <NavLink to={"/categories"}>Ver Mas</NavLink>
-          </NavDropdown> */}
-
           <NavLink className="navLink" to="/">
-            Nosotros
+            Acerca de Nosotros
           </NavLink>
 
           <NavLink className="navLink" to="/">
@@ -85,6 +76,22 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+/* <NavDropdown title="TIENDA" id="basic-nav-dropdown">
+  {categories.length > 0
+    ? categories.map((category) => {
+        return (
+          <NavLink
+            className="navLink"
+            to={`/categories/${category.key}`}
+            key={category.id}
+          >
+            {category.key}
+          </NavLink>
+        );
+      })
+    : null}
+</NavDropdown>; */
 
 /* <div>
   <ul>

@@ -29,14 +29,14 @@ const ItemCount = ({ initialValue, maxValue, onAdd }) => {
         <p className="count-number">{counter}</p>
 
         <Button
-          content={"+"}
-          callback={adding}
+          content={"-"}
+          callback={removing}
           className="buttonCounter"
         ></Button>
 
         <Button
-          content={"-"}
-          callback={removing}
+          content={"+"}
+          callback={adding}
           className="buttonCounter"
         ></Button>
       </div>
