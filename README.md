@@ -4,27 +4,38 @@
 
 ---
 
-## Getting Started with Create React App
+<a href="">
+<img src="" alt="MU CUEROS" border="0">
+</a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting Started with Create React App 
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app/ "Create React App").
 
-## Dependencies
+## 🚀 Usage
+ You’ll need to have Node >= 8.10 and npm >= 5.6 on your machine. To create a project, run:
 
-> Clone the repository and install the dependencies to get started
+> ##### npx create-react-app my-app
+> ##### cd my-app
+> ##### npm start
 
-- _npm modules_
+## 🛠️ Dependencies
 
-- _firebase: 8.2.3_
+Clone the repository and install the dependencies to get started
 
-- _node-sass: 4.14.1_
+- ##### npm modules
 
-- _react-bootstrap: 1.4.0_
+- ##### firebase: 8.2.3
 
-- _react-icons: 4.1.0_
+- ##### node-sass: 4.14.1
 
-- _sweetalert2: 10.14.0_
+- ##### react-bootstrap: 1.4.0
 
-- _vanilla-tilt: 1.7.0_
+- ##### react-icons: 4.1.0
 
-Created by  **Wanda Catellani**
+- ##### sweetalert2: 10.14.0
+
+- ##### vanilla-tilt: 1.7.0
+
+## ✒️ Autora 
+This README was generated with ❤️ by  **[Wanda Catellani](https://www.linkedin.com/in/wan-catellani/)** 

@@ -4,88 +4,123 @@ import useCartContext from "../../context/CartContext";
 import Button from "../../components/Button/Button";
 import { Form, Col, Row } from "react-bootstrap";
 import "./CheckoutContainer.scss";
+import firebase from "firebase/app";
 
 const CheckoutContainer = () => {
   const { products, getGrandTotal } = useCartContext();
-  const [orderId, setOrderId] = useState();
   const db = getFirestore();
-  const orders = db.collection("orders");
+  const [sale, saleCompleted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    surname: "",
+    email: "",
+    address: "",
+    state: "",
+    zip: "",
+  });
+  const [orderId, setOrderId] = useState("");
 
-  const Compra = () => {
-    let precioTotal = getGrandTotal(products);
-    let nombre = document.querySelector("#name").value;
-    let apellido = document.querySelector("#surname").value;
-    let email = document.querySelector("#email").value;
-    let address = document.querySelector("#address").value;
-    let estado = document.querySelector("#state").value;
-    let zip = document.querySelector("#zip").value;
-
-    const newOrder = {
-      buyer: nombre,
-      apellido: apellido,
-      email: email,
-      address: address,
-      estado: estado,
-      zip: zip,
-      total: precioTotal,
-    };
-
-    orders
-      .add(newOrder)
-      .then(({ id }) => {
-        setOrderId(id);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-      .finally(() => {
-        alert("Compra realizada con éxito");
-        console.log(orderId);
-      });
+  const handleChangeInput = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  return (
+  const compra = {
+    user: formData,
+    items: products.items,
+    totalPrice: products.precioTotal,
+    date: firebase.firestore.Timestamp.fromDate(new Date()),
+  };
+
+  const handleSubmitForm = (e) => {
+    e.preventDefault();
+
+    db.collection("orders")
+      .add(compra)
+      .then(({ id }) => {
+        saleCompleted(true);
+        setOrderId(id);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  return !sale ? (
     <div className="container checkout">
       <Row>
         <Col xs={12} md={5} className="formulario">
-          <Form className="form">
+          <Form className="form" onSubmit={handleSubmitForm}>
             <Form.Row>
-              <Form.Group as={Col} md="12" controlId="formGridName">
+              <Form.Group as={Col} md="12">
                 <Form.Label>Nombre</Form.Label>
-                <Form.Control type="text" id="name" required />
+                <Form.Control
+                  type="text"
+                  id="name"
+                  value={formData.name}
+                  onChange={handleChangeInput}
+                  required
+                />
               </Form.Group>
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col} md="12" controlId="formGridName">
+              <Form.Group as={Col} md="12">
                 <Form.Label>Apellido</Form.Label>
-                <Form.Control type="text" id="surname" required />
+                <Form.Control
+                  type="text"
+                  id="surname"
+                  value={formData.surname}
+                  onChange={handleChangeInput}
+                  required
+                />
               </Form.Group>
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col} md="12" controlId="formGridEmail">
+              <Form.Group as={Col} md="12">
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" id="email" required />
+                <Form.Control
+                  type="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={handleChangeInput}
+                  required
+                />
               </Form.Group>
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col} md="12" controlId="formGridAddress1">
+              <Form.Group as={Col} md="12">
                 <Form.Label>Dirección</Form.Label>
-                <Form.Control type="text" id="address" required />
+                <Form.Control
+                  type="text"
+                  id="address"
+                  value={formData.address}
+                  onChange={handleChangeInput}
+                  required
+                />
               </Form.Group>
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col} md="6" controlId="formGridState">
+              <Form.Group as={Col} md="6">
                 <Form.Label>Estado</Form.Label>
-                <Form.Control type="text" id="state" required />
+                <Form.Control
+                  type="text"
+                  id="state"
+                  value={formData.state}
+                  onChange={handleChangeInput}
+                  required
+                />
               </Form.Group>
 
-              <Form.Group as={Col} md="6" controlId="formGridZip">
+              <Form.Group as={Col} md="6">
                 <Form.Label>Zip</Form.Label>
-                <Form.Control type="text" id="zip" required />
+                <Form.Control
+                  type="text"
+                  id="zip"
+                  value={formData.zip}
+                  onChange={handleChangeInput}
+                  required
+                />
               </Form.Group>
             </Form.Row>
 
@@ -103,7 +138,7 @@ const CheckoutContainer = () => {
             <Button
               className="btn-fin"
               content={"Finalizar Compra"}
-              callback={() => Compra()}
+              callback="submit"
             />
           </Form>
         </Col>
@@ -148,6 +183,10 @@ const CheckoutContainer = () => {
         </Col>
       </Row>
     </div>
+  ) : (
+    <p>
+      La compra se realizó correctamente, tu número de seguimiento es: {orderId}
+    </p>
   );
 };
 

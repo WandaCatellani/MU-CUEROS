@@ -101,15 +101,12 @@ export default NavBar;
         <Link to={`/categories/key1`}>
           <div>key1</div>
         </Link>
-
         <Link to={`/categories/key2`}>
           <div>key1</div>
         </Link>
-
         <Link to={`/categories/key3`}>
           <div>key1</div>
         </Link>
-
       </div>
     </li>
   </ul>
