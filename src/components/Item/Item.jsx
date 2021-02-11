@@ -43,7 +43,7 @@ import "./Item.scss";
 
 function Item({ item }) {
   return (
-    <div className="animate__animated animate__zoomIn cards"> {/* animate__fadeInUp */}
+    <div className="animate__animated animate__zoomIn cards">
       <Link to={`/detail/${item.id}`} className="a-img">
         <img className="card-img" src={item.picture} alt="product" />
         <h3 className="card-title">{item.title}</h3>
@@ -63,8 +63,12 @@ function Item({ item }) {
             <span></span>
             <span></span>
           </div>
-          
-          <Button className="btn-card" content={`Ver`} path={`/detail/${item.id}`} />
+
+          <Button
+            className="btn-card"
+            content={`Ver`}
+            path={`/detail/${item.id}`}
+          />
         </div>
       </Link>
     </div>

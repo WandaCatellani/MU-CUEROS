@@ -53,7 +53,7 @@ const ItemDetail = ({ product, options, ...rest }) => {
 
             <Button
               className="item-btn"
-              content={`Agregar al Carrito ${quantity} ${product.title}`}
+              content={`🛒 Agregar ${quantity} ${product.title}`}
               callback={addToCart}
             />
 

@@ -10,6 +10,8 @@ const CheckoutContainer = () => {
   const { products, getGrandTotal } = useCartContext();
   const db = getFirestore();
   const [sale, saleCompleted] = useState(false);
+  const [orderId, setOrderId] = useState("");
+
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -18,7 +20,6 @@ const CheckoutContainer = () => {
     state: "",
     zip: "",
   });
-  const [orderId, setOrderId] = useState("");
 
   const handleChangeInput = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,8 +27,8 @@ const CheckoutContainer = () => {
 
   const compra = {
     user: formData,
-    items: products.items,
-    totalPrice: products.precioTotal,
+    items: products,
+    totalPrice: getGrandTotal,
     date: firebase.firestore.Timestamp.fromDate(new Date()),
   };
 
@@ -53,7 +54,7 @@ const CheckoutContainer = () => {
                 <Form.Label>Nombre</Form.Label>
                 <Form.Control
                   type="text"
-                  id="name"
+                  name="name"
                   value={formData.name}
                   onChange={handleChangeInput}
                   required
@@ -66,7 +67,7 @@ const CheckoutContainer = () => {
                 <Form.Label>Apellido</Form.Label>
                 <Form.Control
                   type="text"
-                  id="surname"
+                  name="surname"
                   value={formData.surname}
                   onChange={handleChangeInput}
                   required
@@ -79,7 +80,7 @@ const CheckoutContainer = () => {
                 <Form.Label>Email</Form.Label>
                 <Form.Control
                   type="email"
-                  id="email"
+                  name="email"
                   value={formData.email}
                   onChange={handleChangeInput}
                   required
@@ -92,7 +93,7 @@ const CheckoutContainer = () => {
                 <Form.Label>Dirección</Form.Label>
                 <Form.Control
                   type="text"
-                  id="address"
+                  name="address"
                   value={formData.address}
                   onChange={handleChangeInput}
                   required
@@ -105,7 +106,7 @@ const CheckoutContainer = () => {
                 <Form.Label>Estado</Form.Label>
                 <Form.Control
                   type="text"
-                  id="state"
+                  name="state"
                   value={formData.state}
                   onChange={handleChangeInput}
                   required
@@ -116,7 +117,7 @@ const CheckoutContainer = () => {
                 <Form.Label>Zip</Form.Label>
                 <Form.Control
                   type="text"
-                  id="zip"
+                  name="zip"
                   value={formData.zip}
                   onChange={handleChangeInput}
                   required

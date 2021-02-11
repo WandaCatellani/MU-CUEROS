@@ -5,16 +5,16 @@ const useCartContext = () => useContext(AppContext);
 
 export const AppProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
+
   const addProduct = (product, quantity) => {
     // Busca en el array si existe. Si esta no lo trae
-    const existing = products.find((p) => p.id === product.id);
+    const existing = products.findIndex((p) => p.id === product.id);
 
     // Si existe
-    if (existing) {
-      // Sumo al existente
-      existing.quantity += quantity;
-      // Crea un array nuevo
-      setProducts([...product]);
+    if (existing !== -1) {
+      const newArray = Array.from(products);
+      products[existing].quantity += quantity;
+      setProducts(newArray);
     } else {
       // Agrega uno nuevo y crea un array nuevo
       setProducts([...products, { ...product, quantity }]);
