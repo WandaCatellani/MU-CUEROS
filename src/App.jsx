@@ -28,7 +28,7 @@ function App() {
 
         <Switch>
           <Route component={Home} path="/" exact />
-          
+
           {/* <Route component={ItemListContainer} path="/" exact /> */}
 
           {/* <Route path="/category/:id">
