@@ -1,7 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 
-const app = firebase.initializeApp ({
+const app = firebase.initializeApp({
   apiKey: "AIzaSyC4XO3WThCjkRCjQkdF5BOrb3i6lVM3kiA",
   authDomain: "mu-cueros.firebaseapp.com",
   projectId: "mu-cueros",
@@ -22,9 +22,9 @@ const app = firebase.initializeApp ({
 
 export const getFirebase = () => {
   return app;
-}
+};
 
 // Para llamar a la base de datos
 export const getFirestore = () => {
   return firebase.firestore();
-}
+};
