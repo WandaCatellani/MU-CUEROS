@@ -1,4 +1,4 @@
-import useCartContext from "../../context/CartContext";
+import useCartContext from "../../Context/CartContext";
 import Button from "../../components/Button/Button";
 import "../../components/Button/Button.scss";
 import "./CartContainer.scss";

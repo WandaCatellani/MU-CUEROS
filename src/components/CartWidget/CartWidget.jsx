@@ -2,7 +2,7 @@ import React from "react";
 import "./CartWidget.scss";
 import { IoMdCart } from "react-icons/io";
 import { Link } from "react-router-dom";
-import useCartContext from "../../context/CartContext";
+import useCartContext from "../../Context/CartContext";
 
 const CartWidget = () => {
   const { productsCount } = useCartContext();

@@ -1,7 +1,7 @@
 import React from "react";
 import "./reset.scss";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { AppProvider } from "./context/CartContext";
+import { AppProvider } from "./Context/CartContext";
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./container/Home/Home";
 // import ItemListContainer from "./container/ItemListContainer/ItemListcontainer";

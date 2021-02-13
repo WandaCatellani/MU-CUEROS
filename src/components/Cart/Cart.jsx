@@ -1,5 +1,5 @@
 import React from "react";
-import useCartContext from "../../context/CartContext";
+import useCartContext from "../../Context/CartContext";
 import Button from "../../components/Button/Button";
 import "./Cart.scss";
 import { MdDelete } from "react-icons/md";

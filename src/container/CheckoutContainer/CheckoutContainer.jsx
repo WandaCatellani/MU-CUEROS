@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { getFirestore } from "../../backend/firebase/Firebase";
-import useCartContext from "../../context/CartContext";
+import useCartContext from "../../Context/CartContext";
 import Button from "../../components/Button/Button";
 import { Form, Col, Row } from "react-bootstrap";
 import "./CheckoutContainer.scss";
@@ -8,6 +8,10 @@ import firebase from "firebase/app";
 
 const CheckoutContainer = () => {
   const { products, getGrandTotal } = useCartContext();
+
+  const prod = products;
+  const total = getGrandTotal;
+
   const db = getFirestore();
   const [sale, saleCompleted] = useState(false);
   const [orderId, setOrderId] = useState("");
@@ -27,8 +31,8 @@ const CheckoutContainer = () => {
 
   const compra = {
     user: formData,
-    items: products,
-    totalPrice: getGrandTotal,
+    items: prod,
+    totalPrice: total,
     date: firebase.firestore.Timestamp.fromDate(new Date()),
   };
 

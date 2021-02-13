@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import "./ItemDetail.scss";
 import Button from "../Button/Button";
 import ItemCount from "../ItemCount/ItemCount";
-import useCartContext from "../../context/CartContext";
+import useCartContext from "../../Context/CartContext";
 import Section from "../Section/Section";
 // import { MdAddShoppingCart } from "react-icons/md";
 
