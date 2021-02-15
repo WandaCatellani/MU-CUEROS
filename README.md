@@ -4,7 +4,7 @@
 
 ---
 
-<a href="https://ibb.co/qYvJ6hd" target="_blank">
+<a href="https://ibb.co/qYvJ6hd" target="blank">
 <img src="https://i.ibb.co/1GkzcBL/mu-cueros.gif" alt="mu-cueros" border="0" />
 </a>
 
