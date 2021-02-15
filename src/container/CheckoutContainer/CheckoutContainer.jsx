@@ -5,12 +5,14 @@ import Button from "../../components/Button/Button";
 import { Form, Col, Row } from "react-bootstrap";
 import "./CheckoutContainer.scss";
 import firebase from "firebase/app";
+import { NavLink } from "react-router-dom";
+import logo from "../../assets/images/logo.jpg";
 
 const CheckoutContainer = () => {
   const { products, getGrandTotal } = useCartContext();
 
   const prod = products;
-  const total = getGrandTotal;
+  const total = getGrandTotal();
 
   const db = getFirestore();
   const [sale, saleCompleted] = useState(false);
@@ -155,7 +157,6 @@ const CheckoutContainer = () => {
             <h5 className="title-pro">Producto</h5>
             <h5 className="title-can">Cantidad</h5>
             <h5 className="title-pr">Precio</h5>
-            <h5 className="title-id">Id Producto</h5>
           </div>
 
           {products.map((product) => {
@@ -168,7 +169,6 @@ const CheckoutContainer = () => {
                 />
                 <h6 className="checkout-q">{product.quantity}</h6>
                 <h6 className="checkout-pr">${product.price}</h6>
-                <h6 className="checkout-id">{orderId}</h6>
               </div>
             );
           })}
@@ -189,9 +189,18 @@ const CheckoutContainer = () => {
       </Row>
     </div>
   ) : (
-    <p>
-      La compra se realizó correctamente, tu número de seguimiento es: {orderId}
-    </p>
+    <div className="container">
+      <div className="numberId">
+        <p>
+          La compra se realizó correctamente, tu número de seguimiento es:
+          <span>{orderId}</span>
+        </p>
+
+        <NavLink to="/" className="checkoutLogo">
+          <img src={logo} className="img-fluid" alt="logo" />
+        </NavLink>
+      </div>
+    </div>
   );
 };
 

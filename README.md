@@ -1,22 +1,25 @@
-# MU CUEROS 
+# MU CUEROS
 
 ## E-commerce project made with React, Sass and Firebase.
 
 ---
 
-<a href="">
-<img src="" alt="MU CUEROS" border="0">
+<a href="https://ibb.co/qYvJ6hd" align="center">
+<img src="https://i.ibb.co/1GkzcBL/mu-cueros.gif" alt="mu-cueros" border="0" align="center" />
 </a>
 
-## Getting Started with Create React App 
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app/ "Create React App").
 
 ## 🚀 Usage
- You’ll need to have Node >= 8.10 and npm >= 5.6 on your machine. To create a project, run:
+
+You’ll need to have Node >= 8.10 and npm >= 5.6 on your machine. To create a project, run:
 
 > ##### npx create-react-app my-app
+>
 > ##### cd my-app
+>
 > ##### npm start
 
 ## 🛠️ Dependencies
@@ -37,5 +40,6 @@ Clone the repository and install the dependencies to get started
 
 - ##### vanilla-tilt: 1.7.0
 
-## ✒️ Autora 
-This README was generated with ❤️ by  **[Wanda Catellani](https://www.linkedin.com/in/wan-catellani/)** 
+## ✒️ Autora
+
+This README was generated with ❤️ by **[Wanda Catellani](https://www.linkedin.com/in/wan-catellani/)**

@@ -22,36 +22,34 @@
 
     .titles-checkout {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-areas: "pro can pr id";
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "pro can pr";
       border-bottom: 1px solid hsl(30, 16%, 70%);
       gap: 0 0.5rem;
-      margin-left: 1.5rem;
+      // margin-left: 1.5rem;
 
-      .checkout-pro {
+      .title-pro {
         grid-area: pro;
+        padding: 0 3rem 0 0.5rem;
       }
 
-      .checkout-can {
+      .title-can {
         grid-area: can;
+        padding: 0 0 0 1.5rem;
       }
 
-      .checkout-pr {
+      .title-pr {
         grid-area: pr;
-      }
-
-      .checkout-id {
-        grid-area: id;
+        padding: 0 0 0 2.5rem;
       }
     }
 
     .orden-checkout {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-areas: "image q pr id";
-      margin: 1rem 0 0;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "image q pr";
+      margin: 1rem 0 0 1.5rem;
       gap: 0 0.5rem;
-      margin-left: 1.5rem;
       padding-bottom: 1rem;
       border-bottom: 1px solid hsl(30, 16%, 70%);
 
@@ -71,12 +69,7 @@
 
       .checkout-pr {
         grid-area: pr;
-        padding-top: 1rem;
-      }
-
-      .checkout-id {
-        grid-area: id;
-        font-size: 1rem;
+        padding: 1rem 2.5rem 0 0;
       }
     }
 
@@ -94,6 +87,33 @@
         padding: 0.2rem 0 0;
         color: hsl(30, 16%, 70%);
       }
+    }
+  }
+}
+
+.numberId {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 80vh;
+
+  p {
+    font-size: 1.5rem;
+
+    span {
+      color: hsl(30, 16%, 70%);
+      padding-left: 1rem;
+    }
+  }
+
+  .checkoutLogo {
+    width: 25%;
+    margin: 0 0 3rem 0;
+
+    img {
+      width: 50%;
     }
   }
 }
