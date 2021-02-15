@@ -4,9 +4,7 @@
 
 ---
 
-<a href="https://ibb.co/qYvJ6hd" target="blank">
-<img src="https://i.ibb.co/1GkzcBL/mu-cueros.gif" alt="mu-cueros" border="0" />
-</a>
+<img src="https://github.com/cwand7/MU-CUEROS/blob/master/src/assets/mu-cueros.gif" alt="mu-cueros" border="0" />
 
 ## Getting Started with Create React App
 
