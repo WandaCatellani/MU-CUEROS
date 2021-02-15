@@ -4,8 +4,8 @@
 
 ---
 
-<a href="https://ibb.co/qYvJ6hd" align="center">
-<img src="https://i.ibb.co/1GkzcBL/mu-cueros.gif" alt="mu-cueros" border="0" align="center" />
+<a href="https://ibb.co/qYvJ6hd" target="_blank">
+<img src="https://i.ibb.co/1GkzcBL/mu-cueros.gif" alt="mu-cueros" border="0" />
 </a>
 
 ## Getting Started with Create React App
